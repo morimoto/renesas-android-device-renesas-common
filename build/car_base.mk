@@ -38,6 +38,11 @@ PRODUCT_PACKAGES += \
     VpnDialogs \
     MmsService \
     ExternalStorageProvider \
+    StorageManager \
+    Calendar \
+    CalendarProvider \
+    DeskClock \
+    QuickSearchBox \
     atrace \
     cameraserver \
     libandroidfw \
