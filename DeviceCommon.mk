@@ -429,6 +429,13 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 # All VNDK libraries (HAL interfaces, VNDK, VNDK-SP, LL-NDK)
 PRODUCT_PACKAGES += vndk_package
 
+# CMS(Color Management System)
+ifeq ($(ENABLE_CMS),true)
+PRODUCT_PACKAGES += \
+    vendor.renesas.graphics.cms@1.0-service.renesas \
+    CmsTest
+endif
+
 # ----------------------------------------------------------------------
 $(call inherit-product, frameworks/base/data/sounds/AudioPackage5.mk)
 
