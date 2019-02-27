@@ -159,9 +159,6 @@ static struct folder_entries *init_fd_entr(char *path)
 
     memset(fd_entr, 0, sizeof(struct folder_entries));
 
-    if (!fd_entr->num_entries)
-        return fd_entr;
-
     fd_entr->entries = (char **)malloc(sizeof(char *)* num_entries);
     if (!fd_entr->entries) {
         printf("[%s: %d] FAILED to allocate memory\n", __func__, __LINE__);
@@ -234,7 +231,7 @@ int main(void)
         sprintf(out_file, "%s%s", fd_name, fd_entr->entries[i]);
         sprintf(in_file, "%s%s", RAMOOPS_SYSFS_DIR, fd_entr->entries[i]);
         if (copy_file(out_file, in_file)) {
-            printf("Can't copy %s file to ");
+            printf("Can't copy %s file to %s\n", in_file, out_file);
             break;
         }
     }
