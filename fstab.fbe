@@ -1,0 +1,17 @@
+# Android fstab file.
+#<src>                                           <mnt_point> <type> <mnt_flags and options> <fs_mgr_flags>
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+/dev/block/platform/soc/ee140000.sd/by-name/bootloader       /bootloader     emmc    defaults                              defaults
+/dev/block/platform/soc/ee140000.sd/by-name/misc             /misc           emmc    defaults                              defaults
+/dev/block/platform/soc/ee140000.sd/by-name/pst              /persistent     emmc    defaults                              defaults
+/dev/block/platform/soc/ee140000.sd/by-name/boot             /boot           emmc    defaults                              defaults
+/dev/block/platform/soc/ee140000.sd/by-name/metadata         /metadata       emmc    defaults                              defaults
+/dev/block/platform/soc/ee140000.sd/by-name/system           /               ext4    ro,barrier=1,discard                  wait,slotselect,avb
+/dev/block/platform/soc/ee140000.sd/by-name/userdata         /data           ext4    noatime,nosuid,nodev,barrier=1        wait,check,encryptable=/dev/block/platform/soc/ee140000.sd/by-name/metadata,latemount,fileencryption=software,quota,reservedsize=128M
+
+# External memory
+/devices/platform/soc/*/mmc_host/mmc1*                       auto            auto    defaults                              voldmanaged=sdcard1:auto,encryptable=userdata
+/devices/platform/soc/*/mmc_host/mmc2*                       auto            auto    defaults                              voldmanaged=sdcard2:auto,encryptable=userdata
+/devices/platform/soc/*/usb*                                 auto            auto    defaults                              voldmanaged=usb:auto,encryptable=userdata

@@ -1,0 +1,9 @@
+type tee_recovery, domain, coredomain;
+type tee_recovery_exec, exec_type, file_type;
+
+init_daemon_domain(tee_recovery);
+
+#allow tee_recovery tee_device:chr_file rw_file_perms;
+allow tee_recovery rootfs:file { entrypoint execute map read };
+
+allow tee tmpfs:dir { add_name create open read write getattr setattr };

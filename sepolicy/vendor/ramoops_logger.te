@@ -1,0 +1,11 @@
+# ramoops_logger service
+type ramoops_logger, domain;
+type ramoops_logger_exec, vendor_file_type, exec_type, file_type;
+
+allow ramoops_logger pstorefs:dir { open read search };
+allow ramoops_logger pstorefs:file { open read };
+
+allow ramoops_logger vendor_data_file:dir { open write add_name read setattr create};
+allow ramoops_logger vendor_data_file:file { open write read setattr create };
+
+init_daemon_domain(ramoops_logger)

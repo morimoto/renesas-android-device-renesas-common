@@ -1,0 +1,5 @@
+type gnss_prop, property_type;
+type display_prop, property_type;
+type lmk_prop, property_type;
+type tee_prop, property_type;
+type opengles_prop, property_type;

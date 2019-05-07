@@ -1,0 +1,3 @@
+
+# Recovery TEE
+/sbin/tee-supp_recovery                                                         u:object_r:tee_recovery_exec:s0

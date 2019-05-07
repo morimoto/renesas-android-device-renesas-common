@@ -1,0 +1,7 @@
+type hal_weaver_renesas, domain;
+type hal_weaver_renesas_exec, exec_type, vendor_file_type, file_type;
+
+hal_server_domain(hal_weaver_renesas, hal_weaver)
+init_daemon_domain(hal_weaver_renesas)
+
+allow hal_weaver_renesas tee_device:chr_file { getattr ioctl open read write };

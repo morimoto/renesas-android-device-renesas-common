@@ -1,0 +1,27 @@
+<Included>
+    <Decoders>
+        <MediaCodec name="OMX.RENESAS.VIDEO.DECODER.VP8" type="video/x-vnd.on2.vp8" >
+                <Quirk name="requires-allocate-on-input-ports" />
+                <Quirk name="requires-allocate-on-output-ports" />
+                <Limit name="size" min="80x80" max="1920x1088" />
+                <Limit name="alignment" value="2x2" />
+                <Limit name="block-size" value="16x16" />
+                <Limit name="blocks-per-second" min="1" max="489600" />
+                <Limit name="bitrate" range="1-80000000" />
+                <Limit name="concurrent-instances" max="10" />
+                <Feature name="adaptive-playback" />
+        </MediaCodec>
+    </Decoders>
+    <Encoders>
+        <MediaCodec name="OMX.RENESAS.VIDEO.ENCODER.VP8" type="video/x-vnd.on2.vp8" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
+            <Limit name="size" min="80x80" max="1920x1088" />
+            <Limit name="alignment" value="8x8" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="blocks-per-second" min="1" max="489600" />
+            <Limit name="bitrate" range="1-80000000" />
+            <Limit name="concurrent-instances" max="10" />
+        </MediaCodec>
+    </Encoders>
+</Included>

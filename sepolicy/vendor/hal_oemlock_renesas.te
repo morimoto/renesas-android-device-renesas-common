@@ -1,0 +1,7 @@
+type hal_oemlock_renesas, domain;
+type hal_oemlock_renesas_exec, exec_type, vendor_file_type, file_type;
+
+hal_server_domain(hal_oemlock_renesas, hal_oemlock)
+init_daemon_domain(hal_oemlock_renesas)
+
+allow hal_oemlock_renesas tee_device:chr_file { open read write ioctl };
