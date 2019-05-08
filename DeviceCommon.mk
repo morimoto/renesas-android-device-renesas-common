@@ -190,9 +190,9 @@ PRODUCT_PACKAGES += \
     hyper_ca_legacy \
     unpack_ipl_legacy
 
-PRODUCT_HOST_PACKAGES += \
-    pack_ipl_emmc \
-    pack_ipl_hf
+#PRODUCT_HOST_PACKAGES += \
+#    pack_ipl_emmc \
+#    pack_ipl_hf
 
 # ----------------------------------------------------------------------
 PRODUCT_PROPERTY_OVERRIDES += \
