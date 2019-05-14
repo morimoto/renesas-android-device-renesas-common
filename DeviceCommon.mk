@@ -251,8 +251,8 @@ PRODUCT_PACKAGES += \
     libqos
 
 # Health HAL
-#PRODUCT_PACKAGES += \
-#    android.hardware.health@2.0-service.renesas
+PRODUCT_PACKAGES += \
+   android.hardware.health@2.0-service.renesas
 
 # Keymaster HAL
 PRODUCT_PACKAGES += \
@@ -319,6 +319,12 @@ PRODUCT_PACKAGES += \
 # Vehicle HAL
 RODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@2.0-service.$(TARGET_PRODUCT)
+
+# DRM HAL
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service \
+    android.hardware.drm@1.1-service.clearkey \
 
 # Generic HALs
 #PRODUCT_PACKAGES += \

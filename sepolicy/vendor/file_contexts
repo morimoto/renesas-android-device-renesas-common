@@ -51,7 +51,7 @@
 
 # HALs
 /vendor/bin/hw/android.hardware.memtrack@1.0-service                            u:object_r:hal_memtrack_default_exec:s0
-/vendor/bin/hw/android.hardware.audio.effect@2.0-service                        u:object_r:hal_audio_default_exec:s0
+/vendor/bin/hw/android.hardware.audio.effect@4.0-service.renesas                u:object_r:hal_audio_default_exec:s0
 /vendor/bin/hw/android.hardware.automotive.audiocontrol@1.0-service             u:object_r:hal_audiocontrol_default_exec:s0
 
 # HALs for Renesas products
