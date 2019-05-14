@@ -188,11 +188,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hyper_ca \
     hyper_ca_legacy \
-    unpack_ipl_legacy
 
 PRODUCT_HOST_PACKAGES += \
-    pack_ipl_emmc \
-    pack_ipl_hf
+    pack_ipl_emmc
 
 # ----------------------------------------------------------------------
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -228,17 +226,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ifeq ($(BUILD_BOOTLOADERS),true)
 PRODUCT_PACKAGES += \
     bootloader.img \
-    bootloader_hf.img
 
 # bootloaders in srec format
 ifeq ($(BUILD_BOOTLOADERS_SREC),true)
 PRODUCT_PACKAGES += \
-    bootparam_sa0_hf.srec \
-    cert_header_sa6_hf.srec \
-    bl2_hf.srec \
-    bl31_hf.srec \
-    u-boot-elf_hf.srec \
-    tee_hf.srec
+    bootparam_sa0.srec \
+    cert_header_sa6.srec \
+    bl2.srec \
+    bl31.srec \
+    u-boot-elf.srec \
+    tee.srec
 endif
 endif
 
