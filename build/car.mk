@@ -26,11 +26,6 @@ PRODUCT_PACKAGES += \
     Provision \
     SystemUpdater
 
-# Cell network connections
-PRODUCT_PACKAGES += \
-    Telecom \
-    TeleService
-
 PRODUCT_PACKAGES += \
     clatd \
     clatd.conf \
