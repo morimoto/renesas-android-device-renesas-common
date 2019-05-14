@@ -24,6 +24,13 @@ $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-he
 # Linux Kernel, OP-TEE, TAs, U-BOOT, IPLs
 BSP_GCC_CROSS_COMPILE := $(abspath ./prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu/bin/aarch64-linux-gnu-)
 
+OPTEE_OUT = $(abspath $(PRODUCT_OUT)/obj/OPTEE_OBJ)
+OPTEE_CROSS_COMPILE = $(BSP_GCC_CROSS_COMPILE)
+# OP-TEE TA developer kit
+TA_DEV_KIT_DIR = $(OPTEE_OUT)/export-ta_arm64
+# TA intermediates output folder
+TA_OUT_INTERMEDIATES = $(abspath $(PRODUCT_OUT)/obj/TA_OBJ)
+
 # Clang prebuilts March 2019
 ANDROID_CLANG_TOOLCHAIN := $(abspath ./prebuilts/clang/host/linux-x86/clang-r353983c/bin/clang)
 
