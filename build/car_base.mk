@@ -18,7 +18,6 @@
 # car packages should be added to car.mk instead of here
 
 PRODUCT_PACKAGES += \
-    Home \
     BasicDreams \
     CaptivePortalLogin \
     CertInstaller \
@@ -34,7 +33,6 @@ PRODUCT_PACKAGES += \
     PacProcessor \
     PrintSpooler \
     ProxyHandler \
-    Settings \
     SharedStorageBackup \
     VpnDialogs \
     MmsService \
