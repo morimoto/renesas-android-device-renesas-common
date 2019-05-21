@@ -276,9 +276,9 @@ PRODUCT_COPY_FILES += \
     vendor/renesas/hal/gnss/fake_route.txt:$(TARGET_COPY_OUT_VENDOR)/etc/fake_route.txt
 
 # USB HAL
-#PRODUCT_PACKAGES += \
-#    android.hardware.usb@1.0-service.renesas \
-#    android.hardware.usb.gadget@1.0-service.renesas
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service.renesas \
+    android.hardware.usb.gadget@1.0-service.renesas
 
 # USB3 firmwares
 PRODUCT_PACKAGES += \
