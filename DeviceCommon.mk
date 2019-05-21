@@ -20,13 +20,6 @@ $(call inherit-product, device/renesas/common/build/car.mk)
 # Adjust the Dalvik heap to be appropriate for a tablet.
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
-# Define cross-compiler for BSP-Projects:
-# Linux Kernel, OP-TEE, TAs, U-BOOT, IPLs
-BSP_GCC_CROSS_COMPILE := $(abspath ./prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu/bin/aarch64-linux-gnu-)
-
-# Clang prebuilts March 2019
-ANDROID_CLANG_TOOLCHAIN := $(abspath ./prebuilts/clang/host/linux-x86/clang-r353983c/bin/clang)
-
 # Build and run only ART
 PRODUCT_RUNTIMES := runtime_libart_default
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
@@ -424,3 +417,13 @@ endif
 
 PRODUCT_PACKAGES += \
     ramoops_logger
+
+# ----------------------------------------------------------------------
+# Please keep these records at end of file DeviceCommon.mk
+
+# Define cross-compiler for BSP-Projects: Linux Kernel, OP-TEE, TAs, U-BOOT, IPLs
+BSP_GCC_CROSS_COMPILE       := $(abspath ./prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu/bin/aarch64-linux-gnu-)
+# Clang prebuilts March 2019
+ANDROID_CLANG_TOOLCHAIN     := $(abspath ./prebuilts/clang/host/linux-x86/clang-r353983c/bin/clang)
+# Prebuilt Make program
+ANDROID_MAKE                := $(abspath ./prebuilts/build-tools/linux-x86/bin/make)
