@@ -51,6 +51,9 @@
 /dev/tee0                                                                       u:object_r:tee_device:s0
 /dev/teepriv0                                                                   u:object_r:tee_device:s0
 
+# IP utilities
+/system/bin/ip                                                                  u:object_r:ip_exec:s0
+
 # HALs
 /vendor/bin/hw/android.hardware.memtrack@1.0-service                            u:object_r:hal_memtrack_default_exec:s0
 /vendor/bin/hw/android.hardware.audio.effect@4.0-service.renesas                u:object_r:hal_audio_default_exec:s0

@@ -1,0 +1,8 @@
+type ip, domain, coredomain;
+type ip_exec, exec_type, system_file_type, file_type;
+
+init_daemon_domain(ip);
+
+allow ip self:capability { sys_module net_admin net_raw };
+allow ip self:netlink_route_socket { bind create getattr nlmsg_write read setopt write };
+allow ip self:udp_socket { create ioctl };
