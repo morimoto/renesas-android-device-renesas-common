@@ -1,0 +1,9 @@
+
+allow carservice_app cgroup:file { open write };
+
+allow carservice_app wifi_service:service_manager find;
+
+allow carservice_app healthd:binder { call transfer };
+
+allow carservice_app sysfs_fs_lifetime:file { getattr open read };
+

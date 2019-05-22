@@ -1,0 +1,7 @@
+
+allow hal_sensors_default vndbinder_device:chr_file { open read write ioctl map };
+
+allow hal_sensors_default input_device:chr_file { ioctl open read };
+allow hal_sensors_default input_device:dir { search open read };
+
+allow hal_sensors_default sysfs:file { getattr open read write };

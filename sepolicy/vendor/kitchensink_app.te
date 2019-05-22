@@ -1,0 +1,2 @@
+
+allow kitchensink_app cgroup:file { open write };

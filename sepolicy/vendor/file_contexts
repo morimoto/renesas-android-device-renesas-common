@@ -1,5 +1,7 @@
 # Block devices
 /dev/block/mmcblk0                                                              u:object_r:root_block_device:s0
+/dev/block/mmcblk[1-2]                                                          u:object_r:sdcard_block_device:s0
+/dev/block/mmcblk[1-2]+p[0-9]                                                   u:object_r:sdcard_block_device:s0
 /dev/block/platform/soc/ee140000.sd/by-name/boot_[ab]                           u:object_r:boot_block_device:s0
 /dev/block/platform/soc/ee140000.sd/by-name/bootloader_[ab]                     u:object_r:bootloader_block_device:s0
 /dev/block/platform/soc/ee140000.sd/by-name/dtb_[ab]                            u:object_r:dtb_block_device:s0

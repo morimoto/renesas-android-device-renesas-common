@@ -1,0 +1,2 @@
+
+allow hal_health_default self:capability2 wake_alarm;

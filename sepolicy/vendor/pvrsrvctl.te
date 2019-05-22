@@ -7,6 +7,8 @@ allow pvrsrvctl vendor_file:system module_load;
 allow pvrsrvctl self:capability { sys_admin sys_module sys_nice };
 allow pvrsrvctl kernel:process setsched;
 
+allow pvrsrvctl debugfs_pvr:dir search;
+
 # allow access to the device nodes (pvrsrvkm, pvr_sync, sw_sync)
 allow pvrsrvctl gpu_device:chr_file rw_file_perms;
 
