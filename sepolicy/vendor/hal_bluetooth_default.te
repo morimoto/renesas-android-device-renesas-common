@@ -1,0 +1,2 @@
+
+allow hal_bluetooth_default self:bluetooth_socket { bind create read write };

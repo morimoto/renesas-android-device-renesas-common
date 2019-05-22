@@ -256,6 +256,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@2.0-service.$(TARGET_PRODUCT)
 
+# Bluetooth HAL (system/bt/vendor_libs/linux/interface)
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-service.btlinux
+
 # EVS resources
 #PRODUCT_PACKAGES += \
 #    android.hardware.automotive.evs@1.0-service.renesas \
