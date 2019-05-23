@@ -3,12 +3,14 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-/dev/block/platform/soc/ee140000.sd/by-name/bootloader       /bootloader     emmc    defaults                              defaults
+system                                                       /system         ext4    ro,barrier=1                          wait,slotselect,avb=vbmeta,logical,first_stage_mount
+vendor                                                       /vendor         ext4    ro,barrier=1                          wait,slotselect,avb,logical,first_stage_mount
+product                                                      /product        ext4    ro,barrier=1                          wait,slotselect,avb,logical,first_stage_mount
+odm                                                          /odm            ext4    ro,barrier=1                          wait,slotselect,avb,logical,first_stage_mount
 /dev/block/platform/soc/ee140000.sd/by-name/misc             /misc           emmc    defaults                              defaults
 /dev/block/platform/soc/ee140000.sd/by-name/pst              /persistent     emmc    defaults                              defaults
 /dev/block/platform/soc/ee140000.sd/by-name/boot             /boot           emmc    defaults                              defaults
 /dev/block/platform/soc/ee140000.sd/by-name/metadata         /metadata       emmc    defaults                              defaults
-/dev/block/platform/soc/ee140000.sd/by-name/system           /               ext4    ro,barrier=1,discard                  wait,slotselect,avb
 /dev/block/platform/soc/ee140000.sd/by-name/userdata         /data           ext4    noatime,nosuid,nodev,barrier=1        wait,check,encryptable=/dev/block/platform/soc/ee140000.sd/by-name/metadata,latemount,quota,reservedsize=128M
 
 # External memory
