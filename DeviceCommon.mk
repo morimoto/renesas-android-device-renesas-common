@@ -340,8 +340,7 @@ AB_OTA_PARTITIONS := \
     product
 
 AB_OTA_CUSTOM_PARTITIONS := \
-    bootloader \
-    dtb
+    bootloader
 
 PRODUCT_PACKAGES += \
     update_verifier \

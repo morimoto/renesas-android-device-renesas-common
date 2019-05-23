@@ -45,7 +45,6 @@ $(FULL_OTA_PACKAGE_TARGET) : target-files-package \
 	  --key external/avb/test/data/testkey_rsa4096.pem \
 	  --padding_size 4096 --output $(CUSTOM_VBMETA) \
 	  --include_descriptors_from_image $(ZIP_ROOT)/IMAGES/boot.img \
-	  --include_descriptors_from_image $(ZIP_ROOT)/IMAGES/dtb.img \
 	  --include_descriptors_from_image $(ZIP_ROOT)/IMAGES/dtbo.img \
 	  --include_descriptors_from_image $(ZIP_ROOT)/IMAGES/system.img \
 	  --include_descriptors_from_image $(ZIP_ROOT)/IMAGES/vendor.img \

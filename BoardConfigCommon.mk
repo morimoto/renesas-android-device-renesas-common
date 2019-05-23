@@ -92,8 +92,6 @@ BOARD_AVB_SYSTEM_ADD_HASHTREE_FOOTER_ARGS := --do_not_generate_fec
 BOARD_AVB_VENDOR_ADD_HASHTREE_FOOTER_ARGS := --do_not_generate_fec
 BOARD_AVB_PRODUCT_ADD_HASHTREE_FOOTER_ARGS := --do_not_generate_fec
 
-BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --include_descriptors_from_image $(PRODUCT_OUT)/dtb.img
-
 # Enable dex-preoptimization to speed up first boot sequence
 WITH_DEXPREOPT := true
 ART_USE_HSPACE_COMPACT := true
@@ -114,7 +112,7 @@ BOARD_VENDOR_SEPOLICY_DIRS       += device/renesas/$(TARGET_PRODUCT)/sepolicy/ve
 
 # Kernel build rules
 BOARD_KERNEL_BASE                := 0x48000000
-BOARD_MKBOOTIMG_ARGS             := --second_offset 0x800 --kernel_offset 0x80000 --ramdisk_offset 0x2180000 --header_version 1
+BOARD_MKBOOTIMG_ARGS             := --dtb_offset 0x800 --dtb $(PRODUCT_OUT)/dtb.img --kernel_offset 0x80000 --ramdisk_offset 0x2180000 --header_version 2
 TARGET_KERNEL_SOURCE             := device/renesas/kernel
 
 # Kernel headers
