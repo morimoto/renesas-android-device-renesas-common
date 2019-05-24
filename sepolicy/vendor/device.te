@@ -14,9 +14,6 @@ type bootloader_block_device, dev_type;
 # Vendor block device mounted on /vendor
 type vendor_block_device, dev_type;
 
-# Device tree device
-type dtb_block_device, dev_type;
-
 # Device tree overlay device
 type dtbo_block_device, dev_type;
 
