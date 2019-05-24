@@ -16,3 +16,6 @@ allow update_engine_common tmpfs:lnk_file r_file_perms;
 
 # Allow read/write on product partition.
 allow update_engine_common product_block_device:blk_file rw_file_perms;
+
+# Allow read/write on odm partition.
+allow update_engine_common odm_block_device:blk_file rw_file_perms;

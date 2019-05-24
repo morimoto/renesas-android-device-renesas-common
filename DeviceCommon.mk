@@ -320,7 +320,8 @@ AB_OTA_PARTITIONS := \
     vendor \
     vbmeta \
     dtbo \
-    product
+    product \
+    odm
 
 AB_OTA_CUSTOM_PARTITIONS := \
     bootloader

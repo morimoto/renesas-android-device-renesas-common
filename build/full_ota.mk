@@ -48,7 +48,8 @@ $(FULL_OTA_PACKAGE_TARGET) : target-files-package \
 	  --include_descriptors_from_image $(ZIP_ROOT)/IMAGES/dtbo.img \
 	  --include_descriptors_from_image $(ZIP_ROOT)/IMAGES/system.img \
 	  --include_descriptors_from_image $(ZIP_ROOT)/IMAGES/vendor.img \
-	  --include_descriptors_from_image $(ZIP_ROOT)/IMAGES/product.img
+	  --include_descriptors_from_image $(ZIP_ROOT)/IMAGES/product.img \
+	  --include_descriptors_from_image $(ZIP_ROOT)/IMAGES/odm.img
 	$(hide) find $(ZIP_ROOT)/META | sort >$(BUILT_TARGET_FILES_PACKAGE).list
 	$(hide) find $(ZIP_ROOT) -path $(ZIP_ROOT)/META -prune -o -print \
 		| sort >>$(BUILT_TARGET_FILES_PACKAGE).list

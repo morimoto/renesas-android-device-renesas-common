@@ -22,3 +22,6 @@ type vbmeta_block_device, dev_type;
 
 # Android Product device
 type product_block_device, dev_type;
+
+# Android ODM device
+type odm_block_device, dev_type;
