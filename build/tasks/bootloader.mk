@@ -35,6 +35,9 @@ bootloaderimage: u-boot.bin bootparam_sa0.bin cert_header_sa6.bin bl2.bin bl31.b
 	@rm $(PRODUCT_OUT_ABS)/tee.bin
 	@echo "Bootloader image: $(PRODUCT_OUT)/bootloader.img"
 
+.PHONY: bootloader.img
+bootloader.img: bootloaderimage
+
 ifeq ($(BUILD_BOOTLOADERS),true)
 droidcore: bootloaderimage
 ifeq ($(BUILD_BOOTLOADERS_SREC),true)

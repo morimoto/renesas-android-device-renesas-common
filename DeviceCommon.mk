@@ -215,23 +215,6 @@ PRODUCT_PACKAGES += com.android.future.usb.accessory
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.use_minfree_levels=true
 
-# bootloaders
-ifeq ($(BUILD_BOOTLOADERS),true)
-PRODUCT_PACKAGES += \
-    bootloader.img \
-
-# bootloaders in srec format
-ifeq ($(BUILD_BOOTLOADERS_SREC),true)
-PRODUCT_PACKAGES += \
-    bootparam_sa0.srec \
-    cert_header_sa6.srec \
-    bl2.srec \
-    bl31.srec \
-    u-boot-elf.srec \
-    tee.srec
-endif
-endif
-
 # QoS
 PRODUCT_PACKAGES += \
     libqos
