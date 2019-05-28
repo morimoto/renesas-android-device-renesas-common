@@ -26,7 +26,7 @@ PRODUCT_OUT_ABS := $(abspath $(PRODUCT_OUT))
 .PHONY: bootloaderimage
 bootloaderimage: pack_ipl_emmc
 bootloaderimage: u-boot.bin bootparam_sa0.bin cert_header_sa6.bin bl2.bin bl31.bin tee.bin
-	pack_ipl_emmc all $(PRODUCT_OUT_ABS)
+	$(HOST_OUT_EXECUTABLES)/pack_ipl_emmc all $(PRODUCT_OUT_ABS)
 	@rm $(PRODUCT_OUT_ABS)/bootparam_sa0.bin
 	@rm $(PRODUCT_OUT_ABS)/cert_header_sa6.bin
 	@rm $(PRODUCT_OUT_ABS)/bl2.bin
