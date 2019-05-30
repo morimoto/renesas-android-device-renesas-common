@@ -31,12 +31,6 @@
 /dev/dri/controlD65                                                             u:object_r:gpu_device:s0
 /dev/dri/renderD128                                                             u:object_r:gpu_device:s0
 
-# Video devices
-/dev/video0                                                                     u:object_r:video_device:s0
-/dev/video1                                                                     u:object_r:video_device:s0
-/dev/video2                                                                     u:object_r:video_device:s0
-/dev/video3                                                                     u:object_r:video_device:s0
-
 # Memory manager devices
 /dev/rgnmm                                                                      u:object_r:mmngr_device:s0
 /dev/rgnmmbuf                                                                   u:object_r:mmngr_device:s0
