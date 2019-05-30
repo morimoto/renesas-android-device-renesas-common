@@ -171,7 +171,7 @@ PRODUCT_COPY_FILES += \
 
 # Configstore HAL
 PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.0-service.renesas
+    android.hardware.configstore@1.1-service.renesas
 
 # OPTee
 PRODUCT_PACKAGES += \
