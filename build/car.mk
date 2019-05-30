@@ -24,7 +24,8 @@ PRODUCT_PACKAGES += \
     CarDeveloperOptions \
     OneTimeInitializer \
     Provision \
-    SystemUpdater
+    SystemUpdater \
+    Gallery2
 
 PRODUCT_PACKAGES += \
     clatd \
