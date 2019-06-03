@@ -238,7 +238,7 @@ PRODUCT_PACKAGES += \
 
 # Vehicle HAL
 PRODUCT_PACKAGES += \
-    android.hardware.automotive.vehicle@2.0-service.$(TARGET_PRODUCT)
+    android.hardware.automotive.vehicle@2.0-service.renesas
 
 # Bluetooth HAL (system/bt/vendor_libs/linux/interface)
 PRODUCT_PACKAGES += \
