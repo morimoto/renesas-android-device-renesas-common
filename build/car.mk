@@ -25,7 +25,8 @@ PRODUCT_PACKAGES += \
     OneTimeInitializer \
     Provision \
     SystemUpdater \
-    Gallery2
+    Gallery2 \
+    SoundRecorder
 
 PRODUCT_PACKAGES += \
     clatd \
