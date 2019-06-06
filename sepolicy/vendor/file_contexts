@@ -106,6 +106,8 @@
 /vendor/lib(64)?/libeffects.so                                                  u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libeffectsconfig.so                                            u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libufwriter.so                                                 u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libAppHintsIPC.so                                              u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor.imagination.gpu.apphints@1.0.so                         u:object_r:same_process_hal_file:s0
 
 # Vendor executable files installed by platform into /vendor
 /vendor/bin/tee-supp                                                            u:object_r:tee_exec:s0
