@@ -266,8 +266,7 @@ PRODUCT_COPY_FILES += \
 
 # USB HAL
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.renesas \
-    android.hardware.usb.gadget@1.0-service.renesas
+    android.hardware.usb@1.0-service.renesas
 
 # USB3 firmwares
 PRODUCT_PACKAGES += \
