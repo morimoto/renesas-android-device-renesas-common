@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
     OneTimeInitializer \
     Provision \
     SystemUpdater \
+    Browser2 \
     Gallery2 \
     SoundRecorder
 
