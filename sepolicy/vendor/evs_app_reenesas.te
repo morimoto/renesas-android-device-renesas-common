@@ -1,0 +1,17 @@
+# evs app
+type evs_app_renesas, domain;
+hal_client_domain(evs_app_renesas, hal_evs)
+hal_client_domain(evs_app_renesas, hal_vehicle)
+
+# allow init to launch processes in this context
+type evs_app_renesas_exec, exec_type, file_type, vendor_file_type;
+init_daemon_domain(evs_app_renesas)
+
+allow evs_app_renesas hal_graphics_allocator_default:fd use;
+
+allow evs_app_renesas gpu_device:chr_file { getattr ioctl open read write map };
+allow evs_app_renesas ion_device:chr_file { ioctl open read };
+
+allow evs_app_renesas hal_evs_hwservice:hwservice_manager find;
+#allow evs_app_renesas hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
+allow evs_app_renesas hal_graphics_mapper_hwservice:hwservice_manager find;

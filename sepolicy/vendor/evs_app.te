@@ -1,0 +1,19 @@
+# evs app
+type evs_app, domain, coredomain;
+hal_client_domain(evs_app, hal_evs)
+hal_client_domain(evs_app, hal_vehicle)
+
+# allow init to launch processes in this context
+type evs_app_exec, exec_type, file_type, system_file_type;
+init_daemon_domain(evs_app)
+
+allow evs_app hal_graphics_allocator_default:fd use;
+
+allow evs_app gpu_device:chr_file { getattr ioctl open read write map };
+allow evs_app ion_device:chr_file { ioctl open read };
+
+allow evs_app hal_evs_hwservice:hwservice_manager find;
+#allow evs_app hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
+allow evs_app hal_graphics_mapper_hwservice:hwservice_manager find;
+
+allow evs_app hal_configstore_default:binder { call transfer };

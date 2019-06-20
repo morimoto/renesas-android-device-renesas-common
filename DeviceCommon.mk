@@ -246,16 +246,19 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service.btlinux
 
 # EVS resources
-#PRODUCT_PACKAGES += \
-#    android.hardware.automotive.evs@1.0-service.renesas \
-#    evs_app.renesas
+PRODUCT_PACKAGES += \
+    android.hardware.automotive.evs@1.0-service.renesas \
+    evs_app.renesas
 
-#PRODUCT_COPY_FILES += \
-#    vendor/renesas/hal/evs/config.json:$(TARGET_COPY_OUT_VENDOR)/etc/automotive/evs/config.json
+PRODUCT_COPY_FILES += \
+    vendor/renesas/hal/evs/config.$(TARGET_PRODUCT).json:$(TARGET_COPY_OUT_VENDOR)/etc/automotive/evs/config.json
 
-#PRODUCT_PACKAGES += \
-#    evs_app \
-#    evs_app_default_resources
+PRODUCT_PACKAGES += \
+    evs_app \
+    evs_app_default_resources
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.evs.app=google
 
 # GNSS
 PRODUCT_PACKAGES += \
