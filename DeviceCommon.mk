@@ -122,7 +122,8 @@ PRODUCT_COPY_FILES += \
     device/renesas/common/fstab:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.$(TARGET_PRODUCT)
 
 PRODUCT_PACKAGES += \
-    fastbootd
+    fastbootd \
+    android.hardware.boot@1.0-impl-renesas
 
 # Media codec config xml files
 PRODUCT_COPY_FILES += \
