@@ -27,6 +27,8 @@
          up to this many users can be running in garage mode.
          3 = headless user 0 + two primary users or 1 primary + 1 guest -->
     <integer name="config_multiuserMaxRunningUsers">3</integer>
+    <!-- Arbitrary max 8 users. -->
+    <integer name="config_multiuserMaximumUsers">8</integer>
     <!-- Use delay loccking mode always for automotive -->
     <bool name="config_multiuserDelayUserDataLocking">true</bool>
     <!-- If true, all guest users created on the device will be ephemeral. -->
