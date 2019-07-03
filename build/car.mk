@@ -49,7 +49,7 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.bluetooth.enablenewavrcp=false \
     ro.carrier=unknown \
-    ro.fw.mu.headless_system_user=false
+    ro.fw.mu.headless_system_user=true
 
 $(call inherit-product-if-exists, frameworks/base/data/fonts/fonts.mk)
 $(call inherit-product-if-exists, external/google-fonts/dancing-script/fonts.mk)
