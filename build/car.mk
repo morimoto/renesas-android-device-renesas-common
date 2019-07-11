@@ -29,6 +29,12 @@ PRODUCT_PACKAGES += \
     Gallery2 \
     SoundRecorder
 
+# Phone connections
+PRODUCT_PACKAGES += \
+    Telecom \
+    TeleService \
+    TelephonyProvider
+
 PRODUCT_PACKAGES += \
     clatd \
     clatd.conf \
