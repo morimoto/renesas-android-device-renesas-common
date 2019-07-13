@@ -322,6 +322,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service.renesas
 
+#Fastboot HAL
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-renesas
+
 # A/B System Updates
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
