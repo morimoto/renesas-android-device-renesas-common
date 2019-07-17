@@ -337,9 +337,6 @@ AB_OTA_PARTITIONS := \
     product \
     odm
 
-AB_OTA_CUSTOM_PARTITIONS := \
-    bootloader
-
 PRODUCT_PACKAGES += \
     update_verifier \
     update_engine
