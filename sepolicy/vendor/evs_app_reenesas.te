@@ -13,5 +13,4 @@ allow evs_app_renesas gpu_device:chr_file { getattr ioctl open read write map };
 allow evs_app_renesas ion_device:chr_file { ioctl open read };
 
 allow evs_app_renesas hal_evs_hwservice:hwservice_manager find;
-#allow evs_app_renesas hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
 allow evs_app_renesas hal_graphics_mapper_hwservice:hwservice_manager find;

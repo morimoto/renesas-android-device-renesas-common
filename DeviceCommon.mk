@@ -184,10 +184,6 @@ endif
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libeffects/data/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf
 
-# Configstore HAL
-PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.1-service.renesas
-
 # OPTee
 PRODUCT_PACKAGES += \
     tee-supp \

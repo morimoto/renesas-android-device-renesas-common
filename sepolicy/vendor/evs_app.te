@@ -2,7 +2,6 @@
 type evs_app, domain, coredomain;
 hal_client_domain(evs_app, hal_evs)
 hal_client_domain(evs_app, hal_vehicle)
-hal_client_domain(evs_app, hal_configstore)
 hal_client_domain(evs_app, hal_graphics_allocator)
 
 # allow init to launch processes in this context
@@ -18,5 +17,4 @@ allow evs_app hal_evs_hwservice:hwservice_manager find;
 allow evs_app hal_graphics_mapper_hwservice:hwservice_manager find;
 allow evs_app surfaceflinger_service:service_manager find;
 
-allow evs_app hal_configstore_default:binder { call transfer };
 allow evs_app servicemanager:binder call;
