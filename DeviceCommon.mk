@@ -292,13 +292,13 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 # Generic memtrack module
-#PRODUCT_PACKAGES += \
-#    android.hardware.memtrack@1.0-impl \
-#    android.hardware.memtrack@1.0-service
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service
 
 # Sensors HAL
-#PRODUCT_PACKAGES += \
-#    android.hardware.sensors@1.0-service.renesas
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-service.renesas
 
 # Vehicle HAL
 RODUCT_PACKAGES += \
@@ -311,13 +311,12 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.1-service.clearkey \
 
 # Generic HALs
-#PRODUCT_PACKAGES += \
-#    android.hardware.drm@1.0-service.renesas \
-#    android.hardware.power@1.1-service.renesas \
-#    android.hardware.light@2.0-service.renesas \
-#    android.hardware.contexthub@1.0-service.renesas \
-#    android.hardware.thermal@1.1-service.renesas \
-#    android.hardware.dumpstate@1.0-service.renesas
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-service.renesas \
+    android.hardware.light@2.0-service.renesas \
+    android.hardware.contexthub@1.0-service.renesas \
+    android.hardware.thermal@1.1-service.renesas \
+    android.hardware.dumpstate@1.0-service.renesas
 
 # Boot control HAL (libavb)
 PRODUCT_PACKAGES += \
