@@ -109,8 +109,6 @@
 /vendor/bin/tee-supp                                                            u:object_r:tee_exec:s0
 /vendor/bin/pvrsrvctl                                                           u:object_r:pvrsrvctl_exec:s0
 /vendor/bin/rscompiler                                                          u:object_r:rscompiler_exec:s0
-/vendor/bin/ramoops_logger                                                      u:object_r:ramoops_logger_exec:s0
-/data/vendor/ramoops_logger(/.*)?                                               u:object_r:ramoops_folder:s0
 
 # Vendor config files
 /vendor/usr/idc/.*\.idc                                                         u:object_r:vendor_configs_file:s0
