@@ -105,6 +105,14 @@ static void guess_arm_irq_hints(char *name, struct irq_info *info)
 	static int compiled = 0;
 	static struct irq_match matches[] = {
 		{ "eth.*" ,{0,} ,NULL, IRQ_TYPE_LEGACY, IRQ_GBETH },
+		{ ".*\\.sd" ,{0,} ,NULL, IRQ_TYPE_LEGACY, IRQ_SCSI },
+		{ ".*\\.vsp" ,{0,} ,NULL, IRQ_TYPE_LEGACY, IRQ_VIDEO },
+		{ ".*\\.csi2" ,{0,} ,NULL, IRQ_TYPE_LEGACY, IRQ_VIDEO },
+		{ ".*\\.display" ,{0,} ,NULL, IRQ_TYPE_LEGACY, IRQ_VIDEO },
+		{ ".*\\.video" ,{0,} ,NULL, IRQ_TYPE_LEGACY, IRQ_VIDEO },
+		{ ".*\\.hdmi" ,{0,} ,NULL, IRQ_TYPE_LEGACY, IRQ_VIDEO },
+		{ "rcar_vin" ,{0,} ,NULL, IRQ_TYPE_LEGACY, IRQ_VIDEO },
+		{ "pvrsrvkm" ,{0,} ,NULL, IRQ_TYPE_LEGACY, IRQ_VIDEO },
 		{ "[A-Z0-9]{4}[0-9a-f]{4}", {0,} ,check_platform_device, IRQ_TYPE_LEGACY, IRQ_OTHER},
 		{ "PNP[0-9a-f]{4}", {0,} ,check_platform_device, IRQ_TYPE_LEGACY, IRQ_OTHER},
 		{0,},
