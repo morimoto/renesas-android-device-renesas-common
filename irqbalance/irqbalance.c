@@ -353,7 +353,7 @@ int main(int argc, char** argv)
 			S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)) >= 0) {
 			char str[16];
 			snprintf(str, sizeof(str), "%u\n", getpid());
-			write(pidfd, str, strlen(str));
+			(void) write(pidfd, str, strlen(str));
 			close(pidfd);
 		}
 	}

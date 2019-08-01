@@ -84,7 +84,9 @@
 
 #include "bitmap.h"
 
+#ifdef __aarch64__
 int ffs(unsigned int i);
+#endif
 
 typedef struct { DECLARE_BITMAP(bits, NR_CPUS); } cpumask_t;
 extern cpumask_t _unused_cpumask_arg_;
