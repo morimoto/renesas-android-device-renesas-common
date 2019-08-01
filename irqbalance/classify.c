@@ -575,7 +575,7 @@ static int check_for_module_ban(char *name)
 		return 0;
 }
 
-static int check_for_irq_ban(char *path, int irq, GList *proc_interrupts)
+static int check_for_irq_ban(char *path __attribute__((unused)), int irq, GList *proc_interrupts)
 {
 	struct irq_info find, *res;
 	GList *entry;

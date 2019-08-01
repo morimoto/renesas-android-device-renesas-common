@@ -104,10 +104,10 @@ static void guess_arm_irq_hints(char *name, struct irq_info *info)
 	int i, rc;
 	static int compiled = 0;
 	static struct irq_match matches[] = {
-		{ "eth.*" ,{NULL} ,NULL, IRQ_TYPE_LEGACY, IRQ_GBETH },
-		{ "[A-Z0-9]{4}[0-9a-f]{4}", {NULL} ,check_platform_device, IRQ_TYPE_LEGACY, IRQ_OTHER},
-		{ "PNP[0-9a-f]{4}", {NULL} ,check_platform_device, IRQ_TYPE_LEGACY, IRQ_OTHER},
-		{NULL},
+		{ "eth.*" ,{0,} ,NULL, IRQ_TYPE_LEGACY, IRQ_GBETH },
+		{ "[A-Z0-9]{4}[0-9a-f]{4}", {0,} ,check_platform_device, IRQ_TYPE_LEGACY, IRQ_OTHER},
+		{ "PNP[0-9a-f]{4}", {0,} ,check_platform_device, IRQ_TYPE_LEGACY, IRQ_OTHER},
+		{0,},
 	};
 
 
@@ -218,7 +218,7 @@ GList* collect_full_irq_list()
 #endif
 			}
 			info->hint_policy = global_hint_policy;
-			info->name = strdupa(irq_mod);
+			info->name = strdup(irq_mod);
 			tmp_list = g_list_append(tmp_list, info);
 		}
 	}
