@@ -27,7 +27,8 @@ PRODUCT_PACKAGES += \
     SystemUpdater \
     Browser2 \
     Gallery2 \
-    SoundRecorder
+    SoundRecorder \
+    Music
 
 # Phone connections
 PRODUCT_PACKAGES += \
