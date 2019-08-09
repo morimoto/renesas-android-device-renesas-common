@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Copyright 2019 GlobalLogic
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+For identifying the display attribute please run:
+adb shell su 0 cat "/sys/class/drm/card0-*/connector_id"
+Fot example
+adb shell su 0 cat /sys/class/drm/card0-HDMI-A-1/connector_id
+
+For identifying the input attribute please run:
+adb shell su 0 'dmesg | grep hid-multitouch'
+
+Please place this file as /vendor/etc/input-port-associations.xml
+-->
+<ports>
+  <port display="63" input="usb-ee0c0000.usb-1/input0" />
+  <port display="65" input="usb-ee000000.usb-1/input0" />
+</ports>

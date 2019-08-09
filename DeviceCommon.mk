@@ -135,7 +135,7 @@ PRODUCT_COPY_FILES += \
 
 # Touchcreen configuration
 PRODUCT_COPY_FILES += \
-    device/renesas/common/touchscreen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/touchscreen_skeleton.idc
+    device/renesas/common/input-port-associations-skeleton.xml:$(TARGET_COPY_OUT_VENDOR)/etc/input-port-associations-skeleton.xml
 
 # OMX packages
 #PRODUCT_PACKAGES += \
