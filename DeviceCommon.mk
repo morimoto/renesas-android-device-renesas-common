@@ -366,6 +366,10 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     i2cset
 
+# IRQ balancer utility
+PRODUCT_PACKAGES += \
+    irqbalance
+
 # ----------------------------------------------------------------------
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 
