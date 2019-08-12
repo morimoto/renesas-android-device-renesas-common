@@ -1,0 +1,12 @@
+# irqbalance service
+type irqbalance, domain;
+type irqbalance_exec, vendor_file_type, exec_type, file_type;
+init_daemon_domain(irqbalance)
+
+# allow access to /sys directory
+allow irqbalance sysfs:file { open read getattr };
+# allow access to /proc directory
+allow irqbalance proc:file { read write getattr open };
+allow irqbalance proc_interrupts:file { getattr open read };
+allow irqbalance sysfs:dir { open read };
+allow irqbalance proc_stat:file { getattr open read };
