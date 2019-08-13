@@ -89,6 +89,7 @@ struct option lopts[] = {
 	{"journal", 0, NULL, 'j'},
 	{"banmod", 1 , NULL, 'm'},
 	{"interval", 1 , NULL, 't'},
+	{"banirqname", 1, NULL, 'n'},
 	{0, 0, 0, 0}
 };
 
@@ -96,7 +97,7 @@ static void usage(void)
 {
 	log(TO_CONSOLE, LOG_INFO, "irqbalance [--oneshot | -o] [--debug | -d] [--foreground | -f] [--journal | -j] [--hintpolicy= | -h [exact|subset|ignore]]\n");
 	log(TO_CONSOLE, LOG_INFO, "	[--powerthresh= | -p <off> | <n>] [--banirq= | -i <n>] [--banmod= | -m <module>] [--policyscript= | -l <script>]\n");
-	log(TO_CONSOLE, LOG_INFO, "	[--pid= | -s <file>] [--deepestcache= | -c <n>] [--interval= | -t <n>]\n");
+	log(TO_CONSOLE, LOG_INFO, "	[--pid= | -s <file>] [--deepestcache= | -c <n>] [--interval= | -t <n>] [--banirqname= | -n <name>]\n");
 }
 
 static void parse_command_line(int argc, char **argv)
@@ -106,7 +107,7 @@ static void parse_command_line(int argc, char **argv)
 	unsigned long val;
 
 	while ((opt = getopt_long(argc, argv,
-		"odfjh:i:p:s:c:b:l:m:t:",
+		"odfjh:i:p:s:c:b:l:m:t:n:",
 		lopts, &longind)) != -1) {
 
 		switch(opt) {
@@ -193,6 +194,9 @@ static void parse_command_line(int argc, char **argv)
 					usage();
 					exit(1);
 				}
+				break;
+			case 'n':
+				add_banned_irqs_by_names(optarg);
 				break;
 		}
 	}

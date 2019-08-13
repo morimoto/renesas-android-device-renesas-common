@@ -125,6 +125,7 @@ extern void free_cl_opts(void);
 extern void add_cl_banned_module(char *modname);
 #define irq_numa_node(irq) ((irq)->numa_node)
 
+void add_banned_irqs_by_names(const char *name_list);
 
 /*
  * Generic object functions

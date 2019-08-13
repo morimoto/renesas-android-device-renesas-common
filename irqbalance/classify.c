@@ -36,6 +36,7 @@ struct user_irq_policy {
 
 static GList *interrupts_db = NULL;
 static GList *banned_irqs = NULL;
+static GList *banned_irq_names = NULL;
 static GList *cl_banned_irqs = NULL;
 static GList *cl_banned_modules = NULL;
 
@@ -312,6 +313,14 @@ gint substr_find(gconstpointer a, gconstpointer b)
 		return 0;
 	else
 		return 1;
+}
+
+static int is_banned_irq_name(const char *name)
+{
+	GList *entry = g_list_find_custom(banned_irq_names, name, substr_find);
+
+	/* Return 1 in case if @name exists in @banned_irq_names list and 0 in another case */
+	return entry ? 1 : 0;
 }
 
 static void add_banned_module(char *modname, GList **modlist)
@@ -727,6 +736,7 @@ void free_cl_opts(void)
 {
 	g_list_free_full(cl_banned_modules, free);
 	g_list_free_full(cl_banned_irqs, free);
+	g_list_free_full(banned_irq_names, free);
 	g_list_free(banned_irqs);
 }
 
@@ -737,6 +747,10 @@ static void add_new_irq(int irq, struct irq_info *hint, GList *proc_interrupts)
 
 	new = get_irq_info(irq);
 	if (new)
+		return;
+
+	/* Skipp banned irqs */
+	if (is_banned_irq_name(hint->name))
 		return;
 
 	/* Set NULL devpath for the irq has no sysfs entries */
@@ -874,4 +888,17 @@ static gint sort_irqs(gconstpointer A, gconstpointer B)
 void sort_irq_list(GList **list)
 {
 	*list = g_list_sort(*list, sort_irqs);
+}
+
+void add_banned_irqs_by_names(const char *name_list)
+{
+	const char delim[] = ",";
+	/* Don't modify the source string */
+	char *name_list_dup = strdup(name_list);
+	char *ptr = strtok(name_list_dup, delim);
+
+	while (ptr) {
+		banned_irq_names = g_list_append(banned_irq_names, ptr);
+		ptr = strtok(NULL, delim);
+	}
 }
