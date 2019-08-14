@@ -34,6 +34,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     device/renesas/common/overlay \
     device/renesas/$(TARGET_PRODUCT)/overlay
 
+PRODUCT_ENFORCE_RRO_TARGETS := framework-res
+
 # The default locale should be determined from VPD, not from build.prop.
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
     ro.product.locale
