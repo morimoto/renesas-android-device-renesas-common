@@ -155,9 +155,9 @@ $(call inherit-product-if-exists, vendor/renesas/omx/prebuilts/config/config.mk)
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common@1.0-impl \
-    android.hardware.graphics.mapper@2.0-impl \
-    android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.mapper@3.0-impl \
+    android.hardware.graphics.allocator@3.0-impl \
+    android.hardware.graphics.allocator@3.0-service \
     android.hardware.graphics.composer@2.3-service.renesas \
     powervr_prebuilts
 
