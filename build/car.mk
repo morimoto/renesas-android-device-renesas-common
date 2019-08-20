@@ -92,6 +92,7 @@ PRODUCT_PACKAGES += \
     CarMediaApp \
     CarMessengerApp \
     CarHvacApp \
+    DirectRenderingCluster \
     CarMapsPlaceholder \
     CarLatinIME \
     CarSettings \
