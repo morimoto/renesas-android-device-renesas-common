@@ -1,3 +1,16 @@
 recovery_only(`
   allow fastbootd sysfs:dir { open read };
+  allow fastbootd sysfs:file { getattr open read };
+
+  allow fastbootd rootfs:file { execute_no_trans };
+
+  # permissions for oem erase command
+  allow fastbootd tee_device:chr_file { read write open ioctl };
+
+  # permissions for renesas block devices
+  allow fastbootd {
+    bootloader_block_device
+    dtbo_block_device
+    vbmeta_block_device
+  }:blk_file { w_file_perms getattr ioctl };
 ')
