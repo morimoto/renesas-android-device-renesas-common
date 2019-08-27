@@ -299,10 +299,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
 
-# Sensors HAL
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-service.renesas
-
 # Vehicle HAL
 RODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@2.0-service.$(TARGET_PRODUCT)
