@@ -9,3 +9,7 @@ init_daemon_domain(evs_manager)
 
 # allow use of hwservices
 allow evs_manager hal_graphics_allocator_default:fd use;
+
+# necessary for using the Renesas EVS application
+allow evs_manager hal_evs_hwservice:hwservice_manager add;
+allow evs_manager hidl_base_hwservice:hwservice_manager add;
