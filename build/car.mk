@@ -84,7 +84,7 @@ PRODUCT_PACKAGES += \
     CarFrameworkPackageStubs \
     CarService \
     CarDialerApp \
-    CarRadioApp \
+    RCarRadioApp \
     OverviewApp \
     CarLauncher \
     CarSystemUI \
