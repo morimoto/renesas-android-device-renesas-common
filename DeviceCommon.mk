@@ -23,7 +23,8 @@ $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-he
 # Build and run only ART
 PRODUCT_RUNTIMES := runtime_libart_default
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
-#PRODUCT_SHIPPING_API_LEVEL := 28
+PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Add preffered configurations
 PRODUCT_AAPT_CONFIG := normal mdpi large xlarge hdpi xhdpi
