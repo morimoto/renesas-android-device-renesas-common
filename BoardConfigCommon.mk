@@ -62,6 +62,7 @@ TARGET_BOARD_INFO_FILE := device/renesas/$(TARGET_PRODUCT)/board-info.txt
 
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_RECOVERY_FSTAB := device/renesas/common/fstab
+TARGET_RECOVERY_UI_LIB := librecovery_ui_renesas
 
 # Android images
 #BOARD_USES_PRODUCTIMAGE := true
