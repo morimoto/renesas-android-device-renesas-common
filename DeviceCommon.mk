@@ -261,8 +261,7 @@ PRODUCT_COPY_FILES += \
     vendor/renesas/hal/evs/config.$(TARGET_PRODUCT).json:$(TARGET_COPY_OUT_VENDOR)/etc/automotive/evs/config.json
 
 PRODUCT_PACKAGES += \
-    evs_app \
-    evs_app_default_resources
+    evs_app.gl
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.boot.evs.app=google

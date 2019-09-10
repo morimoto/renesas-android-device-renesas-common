@@ -79,7 +79,7 @@
 /vendor/bin/hw/android.hardware.automotive.evs@1.0-service.renesas              u:object_r:hal_evs_default_exec:s0
 /system/bin/android.automotive.evs.manager@1.0                                  u:object_r:evs_manager_exec:s0
 /vendor/bin/evs_app.renesas                                                     u:object_r:evs_app_renesas_exec:s0
-/system/bin/evs_app                                                             u:object_r:evs_app_exec:s0
+/vendor/bin/evs_app.gl                                                          u:object_r:evs_app_gl_exec:s0
 
 # Same process HALs installed by platform into /vendor
 /vendor/lib(64)?/hw/android.hardware.audio@2.0-impl.so                          u:object_r:same_process_hal_file:s0
