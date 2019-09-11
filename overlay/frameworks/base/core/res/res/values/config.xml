@@ -33,6 +33,8 @@
     <bool name="config_multiuserDelayUserDataLocking">true</bool>
     <!-- If true, all guest users created on the device will be ephemeral. -->
     <bool name="config_guestUserEphemeral">true</bool>
+    <!-- The name of the package that will hold the dialer role by default. -->
+    <string name="config_defaultDialer" translatable="false">com.android.car.dialer</string>
     <!-- Car Mode -->
     <integer name="config_defaultUiModeType">3</integer>
     <!-- Can't leave car mode -->
