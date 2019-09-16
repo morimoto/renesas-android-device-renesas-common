@@ -39,7 +39,6 @@ endif
 BOARD_VENDOR_KERNEL_MODULES += \
 	$(KERNEL_MODULES_OUT)/extcon-usb-gpio.ko \
 	$(KERNEL_MODULES_OUT)/phy-rcar-gen3-usb2.ko \
-	$(KERNEL_MODULES_OUT)/usbcore.ko \
 	$(KERNEL_MODULES_OUT)/renesas_usbhs.ko \
 	$(KERNEL_MODULES_OUT)/ehci-hcd.ko \
 	$(KERNEL_MODULES_OUT)/ehci-platform.ko \
@@ -67,7 +66,6 @@ BOARD_VENDOR_KERNEL_MODULES += \
 BOARD_RECOVERY_KERNEL_MODULES += \
 	$(KERNEL_MODULES_OUT)/extcon-usb-gpio.ko \
 	$(KERNEL_MODULES_OUT)/phy-rcar-gen3-usb2.ko \
-	$(KERNEL_MODULES_OUT)/usbcore.ko \
 	$(KERNEL_MODULES_OUT)/renesas_usbhs.ko
 
 ROGUE_KM_SRC            := hardware/renesas/modules/gfx/build/linux/$(TARGET_BOARD_PLATFORM)_android
