@@ -1,1 +1,0 @@
-allow lmkd lmk_prop:file { read open getattr map };

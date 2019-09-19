@@ -227,10 +227,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += com.android.future.usb.accessory
 
-# lmkd configuration
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lmk.use_minfree_levels=true
-
 # QoS
 PRODUCT_PACKAGES += \
     libqos
