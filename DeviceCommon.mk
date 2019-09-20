@@ -178,7 +178,6 @@ OVERRIDE_RS_DRIVER := libPVRRS.so
 $(call inherit-product, vendor/renesas/hal/audio/car_audio.mk)
 
 PRODUCT_PACKAGES += \
-    audio.r_submix.default \
     audio.a2dp.default \
     android.hardware.audio.effect@5.0-service.renesas
 
