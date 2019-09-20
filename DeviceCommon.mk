@@ -47,7 +47,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.frp.pst="/dev/block/platform/soc/ee140000.sd/by-name/pst"
 
 # Use SdcardFS
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.sys.sdcardfs=1
 
 # ----------------------------------------------------------------------
