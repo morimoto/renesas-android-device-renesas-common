@@ -90,6 +90,7 @@ BOARD_AVB_ODM_ADD_HASHTREE_FOOTER_ARGS := --do_not_generate_fec
 # Dynamic partitions
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true
+BOARD_SUPER_IMAGE_IN_UPDATE_PACKAGE := true
 
 # One group of partitions (system_a, vendor_a, product_a, odm_a)
 # system=2357198848, vendor=268435456, product=524288000, odm=131072000
