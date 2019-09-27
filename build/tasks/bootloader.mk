@@ -29,7 +29,6 @@ bootloaderimage: u-boot ipl_sa ipl_bl tee.bin
 	$(HOST_OUT_EXECUTABLES)/pack_ipl_emmc all $(PRODUCT_OUT_ABS)
 	@rm $(PRODUCT_OUT_ABS)/bootparam_sa0.bin
 	@rm $(PRODUCT_OUT_ABS)/cert_header_sa6.bin
-	@rm $(PRODUCT_OUT_ABS)/bl2.bin
 	@rm $(PRODUCT_OUT_ABS)/bl31.bin
 	@rm $(PRODUCT_OUT_ABS)/u-boot.bin
 	@rm $(PRODUCT_OUT_ABS)/tee.bin
