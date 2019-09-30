@@ -28,7 +28,8 @@ PRODUCT_PACKAGES += \
     Browser2 \
     Gallery2 \
     SoundRecorder \
-    Music
+    Music \
+    UserDictionaryProvider
 
 # Phone connections
 PRODUCT_PACKAGES += \
