@@ -7,3 +7,5 @@ allow carservice_app healthd:binder { call transfer };
 
 allow carservice_app sysfs_fs_lifetime:file { getattr open read };
 
+allow carservice_app self:netlink_route_socket {bind create nlmsg_read read write};
+allow carservice_app self:udp_socket {bind create read write ioctl};
