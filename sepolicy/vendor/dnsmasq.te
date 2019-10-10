@@ -1,0 +1,1 @@
+allow dnsmasq netd:{ fifo_file unix_stream_socket } getattr;
