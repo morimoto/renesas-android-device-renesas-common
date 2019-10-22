@@ -1,3 +1,6 @@
 ro.boot.gps.                            u:object_r:gnss_prop:s0
 ro.boot.display.                        u:object_r:display_prop:s0
 ro.boot.evs.app                         u:object_r:vendor_default_prop:s0
+ro.rfkilldisabled                       u:object_r:vendor_default_prop:s0
+
+persist.bluetooth.enablenewavrcp        u:object_r:exported_bluetooth_prop:s0 exact bool
