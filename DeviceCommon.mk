@@ -43,8 +43,7 @@ PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
 
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=1 \
-    ro.frp.pst="/dev/block/platform/soc/ee140000.sd/by-name/pst"
+    ro.oem_unlock_supported=1
 
 # Use SdcardFS
 PRODUCT_PRODUCT_PROPERTIES += \
