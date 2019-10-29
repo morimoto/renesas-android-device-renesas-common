@@ -416,6 +416,9 @@ ifneq (,$(wildcard vendor/google/products/gms.mk))
         device/renesas/common/permissions/android.hardware.location.network.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.network.xml
 endif
 
+PRODUCT_PACKAGES += \
+    netutils-wrapper-1.0
+
 # ----------------------------------------------------------------------
 # Please keep these records at end of file DeviceCommon.mk
 
