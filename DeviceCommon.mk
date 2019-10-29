@@ -115,18 +115,17 @@ PRODUCT_COPY_FILES += \
 # Enable file encryption for device
 ifeq ($(DISABLE_FBE),true)
 PRODUCT_COPY_FILES += \
-    device/renesas/common/fstab:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(TARGET_PRODUCT)
+    device/renesas/common/fstab:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(TARGET_PRODUCT) \
+    device/renesas/common/fstab:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.$(TARGET_PRODUCT)
 else
 PRODUCT_COPY_FILES += \
-    device/renesas/common/fstab.fbe:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(TARGET_PRODUCT)
+    device/renesas/common/fstab.fbe:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(TARGET_PRODUCT) \
+    device/renesas/common/fstab.fbe:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.$(TARGET_PRODUCT)
 endif
 
 # For dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := true
-
-PRODUCT_COPY_FILES += \
-    device/renesas/common/fstab:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.$(TARGET_PRODUCT)
 
 PRODUCT_PACKAGES += \
     fastbootd \
