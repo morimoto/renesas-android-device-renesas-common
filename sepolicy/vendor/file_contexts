@@ -117,3 +117,12 @@
 # Vendor config files
 /vendor/usr/idc/.*\.idc                                                         u:object_r:vendor_configs_file:s0
 /vendor/usr/keylayout/.*\.kl                                                    u:object_r:vendor_configs_file:s0
+
+# Context for network drivers sysfs attributes
+# On-board chips
+/sys/devices/platform/soc/.*\.(can|ethernet)/net/.*/.*                           u:object_r:sysfs_net:s0
+# Kingfisher Wi-Fi chip
+/sys/devices/platform/soc/.*\.sd/mmc_host/mmc2/.*/.*/wl18xx.*/net/wlan(0|1)/.*   u:object_r:sysfs_net:s0
+# USB Wi-Fi dongles
+/sys/devices/platform/soc/.*\.usb/usb\d*/.*/.*/net/.*                            u:object_r:sysfs_net:s0
+
