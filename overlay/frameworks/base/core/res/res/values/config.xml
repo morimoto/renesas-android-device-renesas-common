@@ -109,4 +109,7 @@
     <bool name="config_supportsSystemDecorsOnSecondaryDisplays">false</bool>
 
     <string name="config_dataUsageSummaryComponent">com.android.car.settings/com.android.car.settings.datausage.DataWarningAndLimitActivity</string>
+
+     <!-- Flag indicating whether the current device is "voice capable". -->
+    <bool name="config_voice_capable">false</bool>
 </resources>
