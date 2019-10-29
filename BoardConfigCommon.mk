@@ -137,3 +137,9 @@ DEVICE_MATRIX_FILE               := device/renesas/$(TARGET_PRODUCT)/compatibili
 # Move device specific properties to /vendor
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 BOARD_VNDK_VERSION                     := current
+
+# Configstore parameters
+VSYNC_EVENT_PHASE_OFFSET_NS      := 1000000
+SF_VSYNC_EVENT_PHASE_OFFSET_NS   := 1000000
+USE_CONTEXT_PRIORITY             := true
+NUM_FRAMEBUFFER_SURFACE_BUFFERS  := 3
