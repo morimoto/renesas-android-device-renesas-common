@@ -18,6 +18,37 @@
 #include "recovery_ui/screen_ui.h"
 #include "recovery_ui/stub_ui.h"
 #include "minui/minui.h"
+#include <xf86drm.h>
+#include <xf86drmMode.h>
+
+static bool isDisplayConnected() {
+    const int drmFd = drmOpen("rcar-du", nullptr);
+
+    if (drmFd < 0) {
+        return false;
+    }
+
+    drmModeRes* const resources = drmModeGetResources(drmFd);
+
+    if (!resources) {
+        return false;
+    }
+
+    bool isConnected = false;
+    for (int32_t i = 0; i < resources->count_connectors && !isConnected; ++i) {
+        drmModeConnector* const connector = drmModeGetConnector(drmFd, resources->connectors[i]);
+        if (connector) {
+            if (connector->connection == DRM_MODE_CONNECTED) {
+                isConnected = true;
+            }
+            drmModeFreeConnector(connector);
+        }
+    }
+
+    drmModeFreeResources(resources);
+    close(drmFd);
+    return isConnected;
+}
 
 /*
 *We need this custom UI to properly handle fastboot/recovery commands
@@ -53,7 +84,7 @@ public:
 Device* make_device() {
     Device* device = new Device(new ScreenRecoveryUI);
 
-    if (gr_init() == -1) {
+    if (!::isDisplayConnected()) {
         /*
         * Replace UI with our stub if no monitor connected or something
         * wrong with graphics;
