@@ -49,6 +49,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.sys.sdcardfs=1
 
+# Enable runtime enforcement
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=enforce
+
 # ----------------------------------------------------------------------
 PRODUCT_COPY_FILES += \
     device/renesas/common/permissions/android.software.home_screen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.home_screen.xml \
@@ -81,6 +85,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
+
+# RCarRadio dependent package
+PRODUCT_COPY_FILES += \
+    frameworks/base/data/etc/car/com.android.car.radio.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.car.radio.xml
 
 # Used to embed a map in an activity view
 PRODUCT_COPY_FILES += \
