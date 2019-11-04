@@ -44,6 +44,10 @@ PRODUCT_PACKAGES += \
     pppd \
     screenrecord
 
+# ActivityViewDemo
+PRODUCT_PACKAGES += \
+    ActivityViewDemo
+
 # This is for testing
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
