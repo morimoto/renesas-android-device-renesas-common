@@ -1,0 +1,2 @@
+
+allow hal_dumpstate_default dumpstate:fifo_file write;

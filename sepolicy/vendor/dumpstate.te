@@ -1,0 +1,6 @@
+
+allow dumpstate debugfs_mmc:dir search;
+allow dumpstate debugfs_sync:dir { open read };
+allow dumpstate ip_exec:file rx_file_perms;
+allow dumpstate vold:binder call;
+allow dumpstate sysfs_mmc_stat:file r_file_perms;

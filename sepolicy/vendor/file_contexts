@@ -126,3 +126,9 @@
 # USB Wi-Fi dongles
 /sys/devices/platform/soc/.*\.usb/usb\d*/.*/.*/net/.*                            u:object_r:sysfs_net:s0
 
+# Files used by dumpstate
+/sys/devices/platform/soc/.*\.sd/mmc_host/mmc\d*/mmc\d*:\d*/block/mmcblk\d*/mmcblk\d*p\d*/stat                              u:object_r:sysfs_mmc_stat:s0
+/sys/devices/platform/soc/.*\.sd/mmc_host/mmc\d*/mmc\d*:\d*/block/mmcblk\d*/mmcblk\d*boot\d*/mmcblk\d*boot\d*p\d*/stat      u:object_r:sysfs_mmc_stat:s0
+/sys/devices/platform/soc/.*\.sd/mmc_host/mmc\d*/mmc\d*:\d*/block/mmcblk\d*/mmcblk\d*boot\d*/stat                           u:object_r:sysfs_mmc_stat:s0
+/sys/devices/platform/soc/.*\.sd/mmc_host/mmc\d*/mmc\d*:\d*/block/mmcblk\d*/stat                                            u:object_r:sysfs_mmc_stat:s0
+
