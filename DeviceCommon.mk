@@ -32,7 +32,9 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # Overlays for device
 DEVICE_PACKAGE_OVERLAYS += \
-    device/renesas/common/overlay \
+    device/renesas/common/overlay
+
+PRODUCT_PACKAGE_OVERLAYS += \
     device/renesas/$(TARGET_PRODUCT)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := framework-res
