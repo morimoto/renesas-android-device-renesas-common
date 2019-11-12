@@ -146,30 +146,16 @@ PRODUCT_PACKAGES += \
     fastbootd \
     android.hardware.boot@1.0-impl-renesas
 
-# Media codec config xml files
 PRODUCT_COPY_FILES += \
-    device/renesas/common/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
-    device/renesas/$(TARGET_PRODUCT)/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
-    device/renesas/$(TARGET_PRODUCT)/media/media_codecs_performance_$(TARGET_BOARD_PLATFORM).xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml
+    device/renesas/$(TARGET_PRODUCT)/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+
+# C2 HAL
+PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0-service.renesas
 
 # Touchcreen configuration
 PRODUCT_COPY_FILES += \
     device/renesas/common/input-port-associations-skeleton.xml:$(TARGET_COPY_OUT_VENDOR)/etc/input-port-associations-skeleton.xml
-
-# OMX packages
-#PRODUCT_PACKAGES += \
-#    libstagefrighthw \
-#    libomxr_adapter \
-#    libomxr_utility \
-#    libomxr_uvcs_udf \
-#    libomxr_cnvosdep \
-#    libomxr_cnvpfdp \
-#    libomxr_videoconverter \
-#    omxr_prebuilts
-
-$(call inherit-product-if-exists, vendor/renesas/omx/prebuilts/config/config.mk)
 
 # Graphics
 PRODUCT_PACKAGES += \
