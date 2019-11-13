@@ -15,3 +15,7 @@ allow vendor_init system_prop:property_service set;
 
 # Needed for set "sys.usb.ffs.aio_compat" via init.*.usb.rc files.
 allow vendor_init ffs_prop:property_service set;
+
+# Needed for getting ro.boottime.init.cold_boot_wait property to mark
+# when coldboot stage is finished
+get_prop(vendor_init, boottime_prop)
