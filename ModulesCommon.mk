@@ -46,7 +46,6 @@ BOARD_VENDOR_KERNEL_MODULES += \
 	$(KERNEL_MODULES_OUT)/ohci-platform.ko \
 	$(KERNEL_MODULES_OUT)/xhci-hcd.ko \
 	$(KERNEL_MODULES_OUT)/xhci-plat-hcd.ko \
-	$(KERNEL_MODULES_OUT)/usbhid.ko \
 	$(KERNEL_MODULES_OUT)/usb-storage.ko
 
 BOARD_VENDOR_KERNEL_MODULES += \
