@@ -51,7 +51,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Enable runtime enforcement
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.control_privapp_permissions=enforce
+    ro.control_privapp_permissions=log
 
 # ----------------------------------------------------------------------
 PRODUCT_COPY_FILES += \
