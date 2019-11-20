@@ -41,7 +41,7 @@
         <permission name="android.permission.READ_SMS" fixed="false"/>
     </exception>
 
-    <exception package="com.android.soundrecorder">
+    <exception package="com.globallogic.rcarsoundrecorder">
         <permission name="android.permission.WRITE_EXTERNAL_STORAGE" fixed="false"/>
         <permission name="android.permission.READ_EXTERNAL_STORAGE" fixed="false"/>
         <permission name="android.permission.RECORD_AUDIO" fixed="false"/>
