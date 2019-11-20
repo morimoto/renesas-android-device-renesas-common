@@ -28,7 +28,6 @@ PRODUCT_PACKAGES += \
     SystemUpdater \
     Browser2 \
     Gallery2 \
-    SoundRecorder \
     Music \
     UserDictionaryProvider
 
@@ -47,6 +46,9 @@ PRODUCT_PACKAGES += \
 # ActivityViewDemo
 PRODUCT_PACKAGES += \
     ActivityViewDemo
+
+PRODUCT_PACKAGES += \
+    RCarSoundRecorder
 
 # This is for testing
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
