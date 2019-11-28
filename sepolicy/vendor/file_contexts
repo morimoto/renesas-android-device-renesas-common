@@ -93,7 +93,6 @@
 /vendor/lib(64)?/hw/android.hardware.renderscript@1.0-impl.so                   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/hw/gralloc.r8a779(5|6|65)?.so                                  u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/hw/memtrack.r8a779(5|6|65)?.so                                 u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/hw/vulkan.r8a779(5|6|65)?.so                                   u:object_r:same_process_hal_file:s0
 
 # Vendor files installed by platform into /vendor
 /vendor/lib(64)?/libIMGegl.so                                                   u:object_r:same_process_hal_file:s0
@@ -101,13 +100,11 @@
 /vendor/lib(64)?/libPVRScopeServices.so                                         u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libglslcompiler.so                                             u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libsrv_um.so                                                   u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libtqvalidate.so                                               u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libusc.so                                                      u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libdrmutils.so                                                 u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libdrm.so                                                      u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libeffects.so                                                  u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libeffectsconfig.so                                            u:object_r:same_process_hal_file:s0
-/vendor/lib(64)?/libufwriter.so                                                 u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libAppHintsIPC.so                                              u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/vendor.imagination.gpu.apphints@1.0.so                         u:object_r:same_process_hal_file:s0
 
