@@ -1,3 +1,4 @@
 typeattribute untrusted_app system_executes_vendor_violators;
 
 allow untrusted_app rscompiler_exec:file rx_file_perms;
+allow untrusted_app ip_exec:file { open x_file_perms read };
