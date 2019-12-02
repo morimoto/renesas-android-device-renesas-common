@@ -25,3 +25,6 @@ type product_block_device, dev_type;
 
 # Android ODM device
 type odm_block_device, dev_type;
+
+# rfkill device
+type rfkill_device, dev_type;
