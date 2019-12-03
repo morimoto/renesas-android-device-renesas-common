@@ -62,10 +62,10 @@ BOARD_SEPOLICY_DIRS += packages/services/Car/car_product/sepolicy/test
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.bluetooth.enablenewavrcp=false \
     ro.carrier=unknown
 
 PRODUCT_PRODUCT_PROPERTIES += \
+    persist.bluetooth.enablenewavrcp=false \
     ro.fw.mu.headless_system_user=true
 
 $(call inherit-product-if-exists, frameworks/base/data/fonts/fonts.mk)
