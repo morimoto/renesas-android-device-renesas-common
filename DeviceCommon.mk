@@ -380,6 +380,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     BlockedNumberProvider
 
+# Network display demo app
+PRODUCT_PACKAGES += \
+    NetworkDisplayDemo
+
 # ----------------------------------------------------------------------
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 
