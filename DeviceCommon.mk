@@ -123,9 +123,15 @@ PRODUCT_COPY_FILES += \
     device/renesas/common/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
     device/renesas/common/seccomp/mediaswcodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy
 
+ifneq ($(ANDROID_MMC_ONE_SLOT),true)
 PRODUCT_COPY_FILES += \
     device/renesas/common/fstab.fbe:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(TARGET_PRODUCT) \
     device/renesas/common/fstab.fbe:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.$(TARGET_PRODUCT)
+else
+PRODUCT_COPY_FILES += \
+    device/renesas/common/fstab.fbe.one_slot:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(TARGET_PRODUCT) \
+    device/renesas/common/fstab.fbe.one_slot:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.$(TARGET_PRODUCT)
+endif
 
 # For dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -324,7 +330,9 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-renesas
 
 # A/B System Updates
-AB_OTA_UPDATER := true
+ifneq ($(ANDROID_MMC_ONE_SLOT),true)
+    AB_OTA_UPDATER := true
+endif
 AB_OTA_PARTITIONS := \
     boot \
     system \
