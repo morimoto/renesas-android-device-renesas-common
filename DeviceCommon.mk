@@ -376,6 +376,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     irqbalance
 
+# Enabling number blocking
+PRODUCT_PACKAGES += \
+    BlockedNumberProvider
+
 # ----------------------------------------------------------------------
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 
