@@ -2,3 +2,6 @@
 allow system_server opengles_prop:file { getattr map open };
 
 allow system_server sysfs_fs_lifetime:file { getattr open read };
+
+# In the next Android version the following line will be redundant.
+get_prop(system_server, vendor_default_prop)

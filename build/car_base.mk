@@ -44,7 +44,6 @@ PRODUCT_PACKAGES += \
     DeskClock \
     QuickSearchBox \
     atrace \
-    cameraserver \
     libandroidfw \
     libaudioutils \
     libmdnssd \

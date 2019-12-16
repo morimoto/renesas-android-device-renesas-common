@@ -55,6 +55,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.control_privapp_permissions=enforce
 
+# Disable CameraServiceProxy for all boards by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    config.disable_cameraservice=true
+
 # ----------------------------------------------------------------------
 PRODUCT_COPY_FILES += \
     device/renesas/common/permissions/android.software.home_screen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.home_screen.xml \
