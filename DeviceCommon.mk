@@ -292,6 +292,12 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
+    libwifi-hal \
+    android.hardware.wifi.supplicant@1.0-service \
+    android.hardware.wifi.supplicant@1.1-service \
+    android.hardware.wifi.supplicant@1.2-service \
+    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.0-service-lib \
     hostapd \
     wlutil \
     wificond \
