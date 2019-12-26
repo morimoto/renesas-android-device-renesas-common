@@ -150,8 +150,15 @@ static inline void for_each_object(GList *list, void (*cb)(struct topo_obj *obj,
 
 extern const char * log_indent;
 extern unsigned int log_mask;
+
+#ifndef LOGLEVEL
+#define LOGLEVEL LOG_INFO
+#endif
+
 #ifdef HAVE_LIBSYSTEMD
 #define log(mask, lvl, fmt, args...) do {					\
+	if (lvl > LOGLEVEL)							\
+		break;								\
 	if (journal_logging) {							\
 		sd_journal_print(lvl, fmt, ##args);				\
 		if (log_mask & mask & TO_CONSOLE)				\
@@ -165,6 +172,8 @@ extern unsigned int log_mask;
 }while(0)
 #else /* ! HAVE_LIBSYSTEMD */
 #define log(mask, lvl, fmt, args...) do {					\
+	if (lvl > LOGLEVEL)							\
+		break;								\
 	if (journal_logging) {							\
 		printf("<%d>", lvl); 						\
 		printf(fmt, ##args);						\

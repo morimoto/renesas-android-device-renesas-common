@@ -5,6 +5,10 @@ LOCAL_PATH := $(call my-dir)
 ################################################################################
 include $(CLEAR_VARS)
 LOCAL_CFLAGS += -DANDROID_BUILD
+ifeq ($(IRQBALANCE_LOGLEVEL),)
+	IRQBALANCE_LOGLEVEL := 6 #LOG_INFO
+endif
+LOCAL_CFLAGS += -DLOGLEVEL=$(IRQBALANCE_LOGLEVEL)
 LOCAL_CFLAGS += $(CFLAGS)
 
 LOCAL_SRC_FILES += activate.c bitmap.c classify.c cputree.c irqbalance.c \
