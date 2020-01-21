@@ -17,3 +17,6 @@ recovery_only(`
   allow init rootfs:system module_load;
   allow init self:capability sys_module;
 ')
+
+# allow init to run shell scripts
+domain_auto_trans(init,vendor_shell_exec,vendor_shell)

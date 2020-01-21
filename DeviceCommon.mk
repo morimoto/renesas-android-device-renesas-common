@@ -111,6 +111,7 @@ PRODUCT_COPY_FILES += \
 
 # Init RC files
 PRODUCT_COPY_FILES += \
+    device/renesas/common/init/init.common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.common.rc \
     packages/services/Car/car_product/init/init.bootstat.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.bootstat.rc
 
 # Custom keylayout for Renesas
@@ -307,6 +308,10 @@ PRODUCT_PACKAGES += \
     wificond \
     wpa_supplicant \
     wpa_supplicant.conf
+
+# Bluetooth
+PRODUCT_COPY_FILES += \
+    device/renesas/common/init/scripts/android.hardware.bluetooth@1.0-service.renesas.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init/scripts/android.hardware.bluetooth@1.0-service.renesas.sh
 
 # Generic memtrack module
 PRODUCT_PACKAGES += \

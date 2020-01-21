@@ -1,0 +1,1 @@
+allow shell sysfs_bluetooth_writable:file getattr;

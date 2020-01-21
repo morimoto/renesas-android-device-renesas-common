@@ -1,0 +1,3 @@
+# Run script to set correct rfkill selinux context
+on property:sys.usb.controller="e6590000.usb"
+    exec_background u:r:vendor_shell:s0 root shell -- /vendor/bin/sh /vendor/etc/init/scripts/android.hardware.bluetooth@1.0-service.renesas.sh

@@ -1,0 +1,6 @@
+# allow vendor shell to change selinux label for sysfs files
+allow vendor_shell sysfs:{file dir} {getattr open read relabelfrom};
+allow vendor_shell sysfs_bluetooth_writable:file relabelto;
+userdebug_or_eng(`
+	allow vendor_shell self:capability sys_admin;
+')
