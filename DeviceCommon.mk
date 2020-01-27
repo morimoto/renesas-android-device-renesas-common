@@ -112,6 +112,7 @@ PRODUCT_COPY_FILES += \
 # Init RC files
 PRODUCT_COPY_FILES += \
     device/renesas/common/init/init.common.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.common.rc \
+    device/renesas/common/init/init.common.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.common.usb.rc \
     packages/services/Car/car_product/init/init.bootstat.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.bootstat.rc
 
 # Custom keylayout for Renesas
