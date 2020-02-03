@@ -1,0 +1,4 @@
+# This is necessary for CTS Runner.
+# In the next Android version it should be
+# changed on the `exported_camera_prop`, or removed at all.
+get_prop(untrusted_app_25, vendor_default_prop)
