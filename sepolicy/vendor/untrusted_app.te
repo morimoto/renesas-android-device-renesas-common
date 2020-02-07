@@ -2,3 +2,8 @@ typeattribute untrusted_app system_executes_vendor_violators;
 
 allow untrusted_app rscompiler_exec:file rx_file_perms;
 allow untrusted_app ip_exec:file { open x_file_perms read };
+
+# This is necessary for CTS Runner.
+# In the next Android version it should be
+# changed on the `exported_camera_prop`, or removed at all.
+get_prop(untrusted_app, vendor_default_prop)
