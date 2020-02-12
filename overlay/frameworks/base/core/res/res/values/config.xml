@@ -110,4 +110,10 @@
 
      <!-- Flag indicating whether the current device is "voice capable". -->
     <bool name="config_voice_capable">false</bool>
+    <!-- Default supported concurrent socket keepalive slots per transport type, used by
+    ConnectivityManager.createSocketKeepalive() for calculating the number of keepalive
+    offload slots that should be reserved for privileged access. This string array should be
+    overridden by the device to present the capability of creating socket keepalives. -->
+    <!-- An Array of "[NetworkCapabilities.TRANSPORT_*],[supported keepalives] -->
+    <string-array translatable="false" name="config_networkSupportedKeepaliveCount"></string-array>
 </resources>
