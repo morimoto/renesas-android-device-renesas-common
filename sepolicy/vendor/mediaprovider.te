@@ -1,0 +1,1 @@
+allowxperm mediaprovider functionfs:file ioctl FUNCTIONFS_ENDPOINT_ALLOC;
