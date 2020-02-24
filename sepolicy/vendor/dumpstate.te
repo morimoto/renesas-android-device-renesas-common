@@ -3,7 +3,11 @@ allow dumpstate {
     debugfs_mmc
     mnt_expand_file
 }:dir search;
-allow dumpstate debugfs_sync:dir { open read };
+allow dumpstate {
+    debugfs_sync
+    mnt_media_rw_file
+}:dir {open read getattr};
 allow dumpstate ip_exec:file rx_file_perms;
 allow dumpstate vold:binder call;
-allow dumpstate sysfs_mmc_stat:file r_file_perms;
+allow dumpstate {debugfs sysfs_mmc_stat}:file r_file_perms;
+

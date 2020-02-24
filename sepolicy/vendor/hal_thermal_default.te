@@ -1,3 +1,7 @@
 
 allow hal_thermal_default sysfs:dir { open read };
-allow hal_thermal_default sysfs:file { open read getattr };
+allow hal_thermal_default {
+    sysfs
+    proc_stat
+}:file { open read getattr };
+
