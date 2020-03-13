@@ -4,6 +4,3 @@ ro.boot.display.                        u:object_r:display_prop:s0
 ro.boot.evs.app                         u:object_r:vendor_default_prop:s0
 vendor.wlan.firmware.version            u:object_r:wifi_prop:s0
 vendor.wlan.driver.version              u:object_r:wifi_prop:s0
-# The aosp/master branch introduce a special property `exported_camera_prop`.
-# So in the next Android version the following line will be redundant.
-config.disable_cameraservice            u:object_r:vendor_default_prop:s0

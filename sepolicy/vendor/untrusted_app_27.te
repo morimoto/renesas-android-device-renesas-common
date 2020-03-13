@@ -1,4 +1,0 @@
-# This is necessary for Gallery2 (com.android.gallery3d) for disabling
-# camera related intents. In the next Android version it should be
-# changed on the `exported_camera_prop`, or removed at all.
-get_prop(untrusted_app_27, vendor_default_prop)
