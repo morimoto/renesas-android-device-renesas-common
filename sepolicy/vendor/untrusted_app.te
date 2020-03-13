@@ -6,9 +6,3 @@ allow untrusted_app ip_exec:file { open x_file_perms read };
 allow untrusted_app {overlayfs_file}:dir getattr;
 allow untrusted_app block_device:dir {getattr search};
 allow untrusted_app userdata_block_device:blk_file getattr;
-
-# This is necessary for CTS Runner.
-# In the next Android version it should be
-# changed on the `exported_camera_prop`, or removed at all.
-get_prop(untrusted_app, vendor_default_prop)
-
