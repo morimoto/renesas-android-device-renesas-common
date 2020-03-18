@@ -1,1 +1,2 @@
 type hal_composer_hwservice, hwservice_manager_type;
+type hal_cms_hwservice, hwservice_manager_type;

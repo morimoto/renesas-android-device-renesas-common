@@ -1,0 +1,6 @@
+type cms_app, domain, coredomain;
+hal_attribute(cms);
+hal_client_domain(cms_app, hal_cms)
+
+allow system_app hal_cms_default:binder call;
+allow system_app hal_cms_hwservice:hwservice_manager find;
