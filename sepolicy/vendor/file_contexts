@@ -84,6 +84,7 @@
 /vendor/bin/hw/android.hardware.automotive.vehicle@2.0-service.renesas          u:object_r:hal_vehicle_default_exec:s0
 /vendor/bin/hw/android.hardware.media.c2@1.0-service.renesas                    u:object_r:hal_codec2_vendor_exec:s0
 /vendor/bin/hw/android.hardware.graphics.allocator@3.0-service.renesas                    u:object_r:hal_graphics_allocator_default_exec:s0
+/vendor/bin/hw/vendor.renesas.graphics.cms@1.0-service.renesas                  u:object_r:hal_cms_default_exec:s0
 
 # EVS hal and app
 /vendor/bin/hw/android.hardware.automotive.evs@1.0-service.renesas              u:object_r:hal_evs_default_exec:s0
