@@ -21,6 +21,9 @@
 # TTY devices
 /dev/ttySC0                                                                     u:object_r:tty_device:s0
 
+#GPIO devices
+/dev/gpiochip[0-9]+                                                             u:object_r:gpio_device:s0
+
 # sync drivers
 /dev/pvr_sync                                                                   u:object_r:gpu_device:s0
 /dev/sw_sync                                                                    u:object_r:gpu_device:s0

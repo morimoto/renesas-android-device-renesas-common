@@ -2,9 +2,12 @@
 allow hal_gnss_default vndbinder_device:chr_file { ioctl map open read write };
 
 allow hal_gnss_default tty_device:chr_file { open read write ioctl };
+allow hal_gnss_default gpio_device:chr_file { open read write ioctl };
 
 allow hal_gnss_default gnss_prop:file { getattr map open read };
 allow hal_gnss_default device:dir { read open search };
 
 allow hal_gnss_default usb_device:dir { read open search };
 allow hal_gnss_default usb_device:chr_file { read open };
+
+allow hal_gnss_default self:capability sys_admin;
