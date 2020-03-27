@@ -35,6 +35,8 @@
 /dev/dri/controlD65                                                             u:object_r:gpu_device:s0
 /dev/dri/renderD128                                                             u:object_r:gpu_device:s0
 
+/dev/rcar_ion_lmk                                                               u:object_r:ion_lmk_device:s0
+
 # Memory manager devices
 /dev/rgnmm                                                                      u:object_r:mmngr_device:s0
 /dev/rgnmmbuf                                                                   u:object_r:mmngr_device:s0
@@ -118,6 +120,7 @@
 /vendor/bin/pvrsrvctl                                                           u:object_r:pvrsrvctl_exec:s0
 /vendor/bin/rscompiler                                                          u:object_r:rscompiler_exec:s0
 /vendor/bin/irqbalance                                                          u:object_r:irqbalance_exec:s0
+/vendor/bin/ion_lmk                                                             u:object_r:ion_lmk_exec:s0
 
 # Vendor config files
 /vendor/usr/idc/.*\.idc                                                         u:object_r:vendor_configs_file:s0

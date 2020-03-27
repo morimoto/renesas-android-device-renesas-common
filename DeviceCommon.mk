@@ -164,6 +164,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service.renesas \
     powervr_prebuilts
 
+# For ion memory control
+PRODUCT_PACKAGES += \
+    ion_lmk
+
 # Render Script
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl \

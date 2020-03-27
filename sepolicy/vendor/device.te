@@ -31,3 +31,5 @@ type rfkill_device, dev_type;
 
 #gpiochip device
 type gpio_device, dev_type;
+
+type ion_lmk_device, dev_type;

@@ -1,0 +1,12 @@
+# ion-lmk service
+type ion_lmk, domain, mlstrustedsubject;
+type ion_lmk_exec, vendor_file_type, exec_type, file_type;
+init_daemon_domain(ion_lmk);
+
+allow ion_lmk self:capability kill;
+
+# Send kill signals
+allow ion_lmk appdomain:process sigkill;
+
+allow ion_lmk ion_device:chr_file { ioctl open read write };
+allow ion_lmk ion_lmk_device:chr_file { ioctl open read write };
