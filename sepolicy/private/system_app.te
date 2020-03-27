@@ -1,1 +1,2 @@
 allow system_app storaged:binder call;
+allow system_app vendor_default_prop:file { getattr map open read };
