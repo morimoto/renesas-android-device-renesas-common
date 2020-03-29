@@ -18,6 +18,8 @@
 # car packages should be added to car.mk instead of here
 
 PRODUCT_PACKAGES += \
+    com.android.wifi \
+    Home \
     BasicDreams \
     CaptivePortalLogin \
     CertInstaller \
@@ -52,7 +54,6 @@ PRODUCT_PACKAGES += \
     libspeexresampler \
     libvariablespeed \
     libwebrtc_audio_preprocessing \
-    wifi-service \
     A2dpSinkService \
     PackageInstaller \
     car-bugreportd \
