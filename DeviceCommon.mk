@@ -343,12 +343,6 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine
 
-# A/B recovery boot control HAL (libavb)
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    libavb_user \
-    libavb \
-    libfs_mgr
-
 # A/B OTA dexopt package
 PRODUCT_PACKAGES += \
     otapreopt_script
@@ -435,7 +429,6 @@ PRODUCT_PACKAGES += \
 
 # Define cross-compiler for BSP-Projects: Linux Kernel, OP-TEE, TAs, U-BOOT, IPLs
 BSP_GCC_CROSS_COMPILE       := $(abspath ./prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu/bin/aarch64-linux-gnu-)
-BSP_GCC_HOST_TOOLCHAIN      := $(abspath ./prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8/bin/x86_64-linux-)
 # Clang prebuilts March 2019
 ANDROID_CLANG_TOOLCHAIN     := $(abspath ./prebuilts/clang/host/linux-x86/clang-r353983c/bin/clang)
 # Prebuilt Make program
