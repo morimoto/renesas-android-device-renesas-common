@@ -4,3 +4,4 @@ ro.boot.display.                        u:object_r:display_prop:s0
 ro.boot.evs.app                         u:object_r:vendor_default_prop:s0
 vendor.wlan.firmware.version            u:object_r:wifi_prop:s0
 vendor.wlan.driver.version              u:object_r:wifi_prop:s0
+sys.usb.ffs.aio_compat                  u:object_r:vendor_default_prop:s0

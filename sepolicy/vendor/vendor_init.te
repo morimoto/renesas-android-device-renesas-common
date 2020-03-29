@@ -13,9 +13,6 @@ recovery_only(`
 # Needed for set "persist.sys.usb.config" via *.mk file.
 allow vendor_init system_prop:property_service set;
 
-# Needed for set "sys.usb.ffs.aio_compat" via init.*.usb.rc files.
-allow vendor_init ffs_prop:property_service set;
-
 # Needed for getting /dev/.coldboot_done file to mark when coldboot
 # stage is finished
 allow vendor_init device:file getattr;
