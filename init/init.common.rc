@@ -48,9 +48,10 @@ on early-init
     start pvrsrvctl
     write /sys/kernel/debug/sched_features NO_ENERGY_AWARE
     write /sys/devices/system/cpu/cpufreq/boost 1
+
     # 60s delay is synced system/core/init/init.cpp. If this file will not
     # be created after 60 seconds init fails with fatal error
-    wait /dev/.coldboot_done 60
+    wait_for_prop ro.cold_boot_done true
     trigger coldboot_done
 
 on init
