@@ -21,4 +21,6 @@
     <!--  default setting for Settings.System.END_BUTTON_BEHAVIOR: 0 for car -->
     <integer name="def_end_button_behavior">0</integer>
     <bool name="def_stay_on_while_plugged_in">true</bool>
+    <!-- Disable system heads-up notifications -->
+    <integer name="def_heads_up_enabled">0</integer>
 </resources>
