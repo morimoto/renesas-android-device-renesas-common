@@ -26,9 +26,24 @@ struct ion_phys_addr {
   unsigned int dma_fd;
   unsigned long phys_addr;
 };
+enum OOM_EVENTS {
+  OOM_THRESHOLD = 1,
+  OOM_ERROR = 2,
+};
+enum OOM_STATE {
+  OOM_RELEASED = 1,
+  OOM_WAIT_EVENT,
+};
+struct ion_oom_event {
+  __u64 memory_available;
+  __u64 oom_threshold;
+  __u32 oom_event;
+  enum OOM_STATE state;
+};
 #define RCAR_ION_MAGIC 'R'
 #define RCAR_ION_CUSTOM _IOWR(RCAR_ION_MAGIC, 6, struct ion_custom_data)
 enum RCAR_CUSTOM_COMMANDS {
   RCAR_GET_PHYS_ADDR = 1,
+  RCAR_GET_OOM_EVENT = 2,
 };
 #endif
