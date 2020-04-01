@@ -11,3 +11,4 @@ allow hal_codec2_vendor gpu_device:chr_file { ioctl map open read write };
 allow hal_codec2_vendor mmngr_device:chr_file { ioctl map open read write };
 allow hal_codec2_vendor uvcs_device:chr_file { ioctl map open read write };
 allow hal_codec2_vendor vspm_device:chr_file { ioctl map open read write };
+allow hal_codec2_vendor ion_device:chr_file { ioctl map open read write };
