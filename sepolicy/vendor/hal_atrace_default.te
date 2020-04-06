@@ -1,0 +1,2 @@
+allow hal_atrace_default debugfs_pvr:dir search;
+allow hal_atrace_default debugfs_pvr:file {write open};

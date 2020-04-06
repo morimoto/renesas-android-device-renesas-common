@@ -1,2 +1,13 @@
 allow shell sysfs_bluetooth_writable:file getattr;
 get_prop(shell, device_config_runtime_native_boot_prop);
+
+userdebug_or_eng(`
+
+# Permissions for systrace scripts
+allow shell {
+halserverdomain
+wificond
+update_engine
+}:binder call;
+
+')
