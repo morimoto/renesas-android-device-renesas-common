@@ -24,6 +24,7 @@
 #endif
 struct ion_proc_info {
   char comm[TASK_COMM_LEN];
+  char state[TASK_COMM_LEN];
   __u64 mem;
   __u32 pid;
 };
