@@ -66,3 +66,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.type.automotive.xml:system/etc/permissions/android.hardware.type.automotive.xml
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
+
+# Default dex optimization configurations
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.dexopt.disable_bg_dexopt=true
