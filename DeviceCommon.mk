@@ -26,6 +26,13 @@ PRODUCT_CHARACTERISTICS := tablet,nosdcard
 PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
+TARGET_USES_CAR_FUTURE_FEATURES := true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=disable
+
+PRODUCT_ENFORCE_RRO_TARGETS := framework-res
+
 # Add preffered configurations
 PRODUCT_AAPT_CONFIG := normal mdpi large xlarge hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
@@ -62,6 +69,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # ----------------------------------------------------------------------
 PRODUCT_COPY_FILES += \
     device/renesas/common/permissions/android.software.home_screen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.home_screen.xml \
+    frameworks/native/data/etc/android.hardware.type.automotive.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.type.automotive.xml \
     frameworks/native/data/etc/android.software.connectionservice.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.connectionservice.xml \
     frameworks/native/data/etc/android.software.voice_recognizers.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.voice_recognizers.xml \
     frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml \
@@ -164,6 +172,9 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@3.0-service \
     android.hardware.graphics.composer@2.3-service.renesas \
     powervr_prebuilts
+
+# Automotive display service
+PRODUCT_PACKAGES += android.frameworks.automotive.display@1.0-service
 
 # Render Script
 PRODUCT_PACKAGES += \
