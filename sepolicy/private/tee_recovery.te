@@ -9,4 +9,5 @@ allow tee tmpfs:dir { add_name create open read write getattr setattr };
 
 recovery_only(`
   allow tee_recovery tee_device:chr_file { ioctl open read write };
+  allow tee_recovery kmsg_debug_device:chr_file write;
 ')
