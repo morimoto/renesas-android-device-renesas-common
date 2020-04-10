@@ -265,7 +265,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-service.renesas
+    android.hardware.gnss@2.0-service.renesas
 
 PRODUCT_COPY_FILES += \
     vendor/renesas/hal/gnss/1.0/fake_route.txt:$(TARGET_COPY_OUT_VENDOR)/etc/fake_route.txt
