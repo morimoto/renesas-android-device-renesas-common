@@ -143,4 +143,8 @@
     overridden by the device to present the capability of creating socket keepalives. -->
     <!-- An Array of "[NetworkCapabilities.TRANSPORT_*],[supported keepalives] -->
     <string-array translatable="false" name="config_networkSupportedKeepaliveCount"></string-array>
+
+    <!-- Disable switching the user while the system is resuming from Suspend to RAM.
+         This default says to prevent changing the user during Resume. -->
+    <bool name="config_disableUserSwitchDuringResume" translatable="false">false</bool>
 </resources>
