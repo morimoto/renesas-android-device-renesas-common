@@ -424,6 +424,11 @@ endif
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
+# Pre-create users
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    android.car.number_pre_created_users=1 \
+    android.car.number_pre_created_guests=1
+
 # ----------------------------------------------------------------------
 # Please keep these records at end of file DeviceCommon.mk
 
