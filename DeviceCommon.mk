@@ -251,8 +251,7 @@ PRODUCT_PACKAGES += \
 
 # EVS resources
 PRODUCT_PACKAGES += \
-    android.hardware.automotive.evs@1.0-service.renesas \
-    evs_app.renesas
+    android.hardware.automotive.evs@1.0-service.renesas
 
 PRODUCT_COPY_FILES += \
     vendor/renesas/hal/evs/config.$(TARGET_PRODUCT).json:$(TARGET_COPY_OUT_VENDOR)/etc/automotive/evs/config.json
