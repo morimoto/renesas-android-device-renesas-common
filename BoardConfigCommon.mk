@@ -150,3 +150,15 @@ BOARD_KERNEL_CMDLINE += of_devlink=0
 
 # Temporary use SELinux in permissive mode
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
+# Add soong namespace and variables for Audio HAL
+SOONG_CONFIG_NAMESPACES += audio_hw
+SOONG_CONFIG_audio_hw += \
+    adsp
+
+# Soong bool variables have no default values and should be initialized
+ifeq ($(ENABLE_ADSP),true)
+    SOONG_CONFIG_audio_hw_adsp := true
+else
+    SOONG_CONFIG_audio_hw_adsp := false
+endif
