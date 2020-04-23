@@ -9,7 +9,7 @@ allow dumpstate {
 }:dir {open read getattr};
 allow dumpstate ip_exec:file rx_file_perms;
 allow dumpstate vold:binder call;
-allow dumpstate {debugfs sysfs_mmc_stat}:file r_file_perms;
+allow dumpstate {debugfs sysfs_mmc_stat sysfs_stat}:file r_file_perms;
 
 allow dumpstate {
     hal_audiocontrol_default

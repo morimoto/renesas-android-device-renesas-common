@@ -137,3 +137,5 @@
 /sys/devices/platform/soc/.*\.sd/mmc_host/mmc\d*/mmc\d*:\d*/block/mmcblk\d*/mmcblk\d*boot\d*/stat                           u:object_r:sysfs_mmc_stat:s0
 /sys/devices/platform/soc/.*\.sd/mmc_host/mmc\d*/mmc\d*:\d*/block/mmcblk\d*/stat                                            u:object_r:sysfs_mmc_stat:s0
 
+#Files used by stat & dumpstate
+/sys/kernel/debug/tracing/instances/wifi/events/mac80211/drv_switch_vif_chanctx/*                                     u:object_r:sysfs_stat:s0
