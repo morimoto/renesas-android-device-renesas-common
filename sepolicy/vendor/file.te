@@ -10,3 +10,6 @@ type sysfs_mmc_stat, fs_type, sysfs_type;
 
 # for PowerHal
 type proc_sched_energy_aware, proc_type, fs_type;
+
+# for vehicle
+type sysfs_pmic, fs_type, sysfs_type;
