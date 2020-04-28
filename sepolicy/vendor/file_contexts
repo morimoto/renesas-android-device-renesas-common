@@ -134,6 +134,8 @@
 /sys/devices/platform/soc/.*\.sd/mmc_host/mmc2/.*/.*/wl18xx.*/net/wlan(0|1)/.*   u:object_r:sysfs_net:s0
 # USB Wi-Fi dongles
 /sys/devices/platform/soc/.*\.usb/usb\d*/.*/.*/net/.*                            u:object_r:sysfs_net:s0
+# PMIC
+/sys/devices/platform/soc/.*\.i2c/i2c-.*/.*/bd9571mwv-regulator/backup_mode      u:object_r:sysfs_pmic:s0
 
 # Files used by dumpstate
 /sys/devices/platform/soc/.*\.sd/mmc_host/mmc\d*/mmc\d*:\d*/block/mmcblk\d*/mmcblk\d*p\d*/stat                              u:object_r:sysfs_mmc_stat:s0

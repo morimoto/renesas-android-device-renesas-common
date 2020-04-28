@@ -5,3 +5,4 @@ allow hal_vehicle_default input_device:chr_file { open read ioctl };
 allowxperm hal_vehicle_default self:can_socket ioctl SIOCGIFINDEX;
 
 allow hal_vehicle_default self:can_socket { bind create read write ioctl };
+allow hal_vehicle_default sysfs_pmic:file rw_file_perms;
