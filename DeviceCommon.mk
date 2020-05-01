@@ -277,8 +277,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.boot.evs.app=google
 
 # GNSS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-service.renesas
+#PRODUCT_PACKAGES += \
+#    android.hardware.gnss@1.0-service.renesas
 
 PRODUCT_COPY_FILES += \
     vendor/renesas/hal/gnss/fake_route.txt:$(TARGET_COPY_OUT_VENDOR)/etc/fake_route.txt
@@ -328,7 +328,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service.renesas \
     android.hardware.light@2.0-service.renesas \
     android.hardware.contexthub@1.0-service.renesas \
-    android.hardware.thermal@1.1-service.renesas \
     android.hardware.dumpstate@1.0-service.renesas
 
 # Boot control HAL (libavb)
