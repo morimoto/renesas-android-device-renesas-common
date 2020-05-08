@@ -188,8 +188,7 @@ OVERRIDE_RS_DRIVER := libPVRRS.so
 $(call inherit-product, vendor/renesas/hal/audio/car_audio.mk)
 
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    android.hardware.audio.effect@5.0-service.renesas
+    audio.a2dp.default
 
 ifeq ($(ENABLE_ADSP),true)
 PRODUCT_PACKAGES += xf-rcar.fw
