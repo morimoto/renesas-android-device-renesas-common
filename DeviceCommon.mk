@@ -265,6 +265,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.boot.evs.app=google
 
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.boot.ion_lmk_start=1
+
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.0-service.renesas
