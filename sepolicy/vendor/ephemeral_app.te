@@ -1,5 +1,3 @@
 typeattribute ephemeral_app system_executes_vendor_violators;
 
 allow ephemeral_app rscompiler_exec:file rx_file_perms;
-
-allow ephemeral_app { ethernet_service wifi_service }:service_manager find;
