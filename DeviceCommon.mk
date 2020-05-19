@@ -164,10 +164,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service.renesas \
     powervr_prebuilts
 
-# For ion memory control
-PRODUCT_PACKAGES += \
-    ion_lmk
-
 # Render Script
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl \
@@ -264,9 +260,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.boot.evs.app=google
-
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.boot.ion_lmk_start=1
 
 # GNSS
 PRODUCT_PACKAGES += \
@@ -409,6 +402,16 @@ PRODUCT_PACKAGES += \
     qos_tp
 
 endif # TARGET_BUILD_VARIANT
+
+# For ion memory control
+ifeq ($(ENABLE_ION_LMK),true)
+PRODUCT_PACKAGES += \
+    ion_lmk
+
+# Enable ion lmk service by default
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.boot.ion_lmk_start=1
+endif
 
 # USB Port Config
 PRODUCT_COPY_FILES += \
