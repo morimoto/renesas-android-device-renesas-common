@@ -59,8 +59,7 @@ BOARD_VENDOR_KERNEL_MODULES += \
 	$(KERNEL_MODULES_OUT)/mse_adapter_alsa.ko \
 	$(KERNEL_MODULES_OUT)/mse_adapter_v4l2.ko \
 	$(KERNEL_MODULES_OUT)/mse_adapter_eavb.ko \
-	$(KERNEL_MODULES_OUT)/mse_adapter_mch.ko \
-	$(KERNEL_MODULES_OUT)/8812au.ko
+	$(KERNEL_MODULES_OUT)/mse_adapter_mch.ko
 
 BOARD_RECOVERY_KERNEL_MODULES += \
 	$(KERNEL_MODULES_OUT)/extcon-usb-gpio.ko \
@@ -122,11 +121,6 @@ ADSP_KM_SRC             := hardware/renesas/modules/adsp-s492c
 ADSP_KM_OUT             := $(PRODUCT_OUT)/obj/ADSP_KM_OBJ
 ADSP_KM_OUT_ABS         := $(abspath $(ADSP_KM_OUT))
 ADSP_KM                 := $(ADSP_KM_OUT)/xtensa-hifi.ko
-
-WLAN_KM_SRC             := hardware/realtek/wlan/rtl8812au_km
-WLAN_KM_OUT             := $(PRODUCT_OUT)/obj/WLAN_KM_OBJ
-WLAN_KM_OUT_ABS         := $(abspath $(WLAN_KM_OUT))
-WLAN_KM                 := $(WLAN_KM_OUT)/8812au.ko
 
 # rgx module
 $(ROGUE_KM):
@@ -230,19 +224,6 @@ $(ADSP_KM):
 		KERNELDIR=$(KERNEL_OUT_ABS) M=$(ADSP_KM_OUT_ABS)
 	cp $(ADSP_KM) $(KERNEL_MODULES_OUT)/
 
-# Realtek 8812au Wi-Fi driver
-$(WLAN_KM):
-	mkdir -p $(WLAN_KM_OUT_ABS)
-	cp -pR $(WLAN_KM_SRC)/* $(WLAN_KM_OUT_ABS)/
-	$(ANDROID_MAKE) -C $(WLAN_KM_OUT_ABS) $(KERNEL_COMPILE_FLAGS) \
-		KERNELDIR=$(KERNEL_OUT_ABS) \
-		WORKDIR=$(WLAN_KM_OUT_ABS) rcar_defconfig
-	$(ANDROID_MAKE) -C $(WLAN_KM_OUT_ABS) $(KERNEL_COMPILE_FLAGS) \
-		KERNELDIR=$(KERNEL_OUT_ABS) WORKDIR=$(WLAN_KM_OUT_ABS) \
-		M=$(WLAN_KM_OUT_ABS) modules
-	cp $(WLAN_KM) $(KERNEL_MODULES_OUT)/
-
-
 KERNEL_EXT_MODULES += \
 	$(ROGUE_KM) \
 	$(VSPM_KM) \
@@ -253,8 +234,7 @@ KERNEL_EXT_MODULES += \
 	$(QOS_KM) \
 	$(ETHAVB_STR_KM) \
 	$(ETHAVB_MCH_KM) \
-	$(ETHAVB_MSE_KM) \
-	$(WLAN_KM)
+	$(ETHAVB_MSE_KM)
 
 ifeq ($(ENABLE_ADSP),true)
 	KERNEL_EXT_MODULES += $(ADSP_KM)
