@@ -478,5 +478,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 BSP_GCC_CROSS_COMPILE       := $(abspath ./prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu/bin/aarch64-linux-gnu-)
 # Clang prebuilts March 2019
 ANDROID_CLANG_TOOLCHAIN     := $(abspath ./prebuilts/clang/host/linux-x86/clang-r353983c/bin/clang)
+ANDROID_LLD_TOOLCHAIN       := $(abspath ./prebuilts/clang/host/linux-x86/clang-r353983c/bin/ld.lld)
 # Prebuilt Make program
 ANDROID_MAKE                := $(abspath ./prebuilts/build-tools/linux-x86/bin/make)
