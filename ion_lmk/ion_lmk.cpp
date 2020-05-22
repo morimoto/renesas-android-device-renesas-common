@@ -46,8 +46,9 @@
 #endif
 
 #define LOG_TAG "Renesas-ION-LMK"
+#define BYTES_TO_MB(x) ((x) / (1024 * 1024))
 
-struct TresholdRange {
+struct ThresholdRange {
     size_t mMax;
     size_t mCurr;
     size_t mMin;
@@ -55,7 +56,7 @@ struct TresholdRange {
 
 class ION_LMK {
     public:
-        ION_LMK(const TresholdRange &threshold) :
+        ION_LMK(const ThresholdRange &threshold) :
             mThreshold(threshold) {};
         void Loop(size_t delay);
         void PrintNonTrackedPorcessesList() const;
@@ -71,7 +72,7 @@ class ION_LMK {
         void KillProcesses();
         void AdbjustThreshold();
 
-        TresholdRange mThreshold;
+        ThresholdRange mThreshold;
         size_t mFreedMemory;
         ion_oom_event mOOM_Event;
         std::vector<ion_proc_info> mConsumers;
@@ -288,7 +289,7 @@ void ION_LMK::Loop(size_t delay) {
     mOOM_Event.oom_threshold = mThreshold.mCurr;
 
     while (true) {
-        ALOGI("Set treshold to %lu MB\n", mThreshold.mCurr);
+        ALOGI("Set threshold to %lu MB\n", BYTES_TO_MB(mThreshold.mCurr));
 
         if (GetIONEventOOM())
             exit(EXIT_FAILURE);
@@ -310,7 +311,7 @@ int main(int argc, char* argv[]) {
                                  { "min_threshold", required_argument, nullptr, 'm' },
                                  { 0, 0, nullptr, 0 } };
     int opt;
-    TresholdRange threshold;
+    ThresholdRange threshold;
 
     while ((opt = getopt_long(argc, argv, "t:m:", longopts, nullptr)) != -1) {
         switch (opt) {
