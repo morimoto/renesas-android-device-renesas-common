@@ -90,9 +90,17 @@ class ION_LMK {
         };
 };
 
+/* The method matches process names with mBannedProcesses patterns */
 bool ION_LMK::IsBannedProcess(const std::string &name) const {
-    auto iter = std::find(mBannedProcesses.begin(), mBannedProcesses.end(), name);
-    return iter != mBannedProcesses.end();
+    for (size_t i = 0; i < mBannedProcesses.size(); ++i) {
+        size_t minLength = name.size() < mBannedProcesses[i].size()
+            ? name.size() : mBannedProcesses[i].size();
+        if (!std::strncmp(name.c_str(), mBannedProcesses[i].c_str(), minLength)) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 void ION_LMK::PrintNonTrackedPorcessesList() const {
