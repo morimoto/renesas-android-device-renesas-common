@@ -328,6 +328,7 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service.renesas \
     android.hardware.light@2.0-service.renesas \
     android.hardware.contexthub@1.0-service.renesas \
+    android.hardware.thermal@2.0-service.renesas \
     android.hardware.dumpstate@1.0-service.renesas
 
 # Boot control HAL (libavb)
