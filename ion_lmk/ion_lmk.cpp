@@ -310,9 +310,7 @@ void ION_LMK::Loop(size_t delay) {
         mOOM_Event.oom_threshold = mThreshold.mCurr;
 
         /* Wait a few seconds until OS kills the process */
-        if (mFreedMemory) {
-            std::this_thread::sleep_for(std::chrono::seconds(delay));
-        }
+        std::this_thread::sleep_for(std::chrono::seconds(delay));
     }
 }
 
