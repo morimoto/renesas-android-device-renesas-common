@@ -85,8 +85,10 @@ class ION_LMK {
             "surfaceflinger",
             /* "ndroid" - isn't typo, the name of process cut to 16 chars by system */
             "ndroid.systemui",
+            /* Exclude the most HALs (hwcomposer and etc)*/
             "android.hardwar",
             "car.carlauncher",
+            "allocator@",
         };
 };
 
