@@ -47,8 +47,6 @@
           enabled. But in environments like real car, default home app may be enough, and in that
           case, this can be disabled (set to false). -->
     <bool name="config_enableCarDockHomeLaunch">false</bool>
-    <!-- Is the lock-screen disabled for new users by default -->
-    <bool name="config_disableLockscreenByDefault">true</bool>
     <!--  Control whether to lock day/night mode change from normal application. When it is
           true, day / night mode change is only allowed to apps with MODIFY_DAY_NIGHT_MODE
           permission. -->
