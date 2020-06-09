@@ -168,8 +168,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.common@1.0-impl \
     android.hardware.graphics.mapper@3.0-impl \
-    android.hardware.graphics.allocator@3.0-impl \
-    android.hardware.graphics.allocator@3.0-service \
+    android.hardware.graphics.allocator@3.0-impl.renesas \
+    android.hardware.graphics.allocator@3.0-service.renesas \
     android.hardware.graphics.composer@2.3-service.renesas \
     powervr_prebuilts
 
