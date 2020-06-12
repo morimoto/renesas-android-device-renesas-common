@@ -145,3 +145,4 @@
 
 #Files used by stat & dumpstate
 /sys/kernel/debug/tracing/instances/wifi/events/mac80211/drv_switch_vif_chanctx/*                                     u:object_r:sysfs_stat:s0
+/sys/devices/platform/soc/ee0a0100.usb/usb\d*/\d*-\d*/\d*-\d*.\d*/\d*-\d*.\d*.\d*/\d*-\d*.\d*.\d*:\d*.\d*/host\d*/target\d*:\d*:\d*/\d*:\d*:\d*:\d*/block/sda/stat                                                         u:object_r:sysfs_stat:s0
