@@ -444,6 +444,9 @@ endif
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
 
+# 32-bit library for 32-bit VtsKernelNetdTest
+PRODUCT_PACKAGES += libssl_32
+
 # ----------------------------------------------------------------------
 # Please keep these records at end of file DeviceCommon.mk
 
