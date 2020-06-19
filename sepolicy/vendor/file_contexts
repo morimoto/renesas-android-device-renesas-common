@@ -99,6 +99,7 @@
 /vendor/lib(64)?/hw/memtrack.r8a779(5|6|65)?.so                                 u:object_r:same_process_hal_file:s0
 
 # Vendor files installed by platform into /vendor
+/vendor/lib(64)?/libpvrANDROID_WSEGL.so                                         u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libIMGegl.so                                                   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libPVRRS.so                                                    u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libPVRScopeServices.so                                         u:object_r:same_process_hal_file:s0
