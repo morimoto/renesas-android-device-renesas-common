@@ -14,7 +14,6 @@
 
 service pvrsrvctl /vendor/bin/pvrsrvctl --start
     class early_hal
-    critical
     user root
     group root
     oneshot
