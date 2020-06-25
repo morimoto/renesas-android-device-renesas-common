@@ -1,0 +1,2 @@
+
+allow carwatchdogd carservice_app:binder { call transfer };
