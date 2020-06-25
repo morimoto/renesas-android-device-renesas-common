@@ -22,7 +22,7 @@ BOARD_PLAT_PRIVATE_SEPOLICY_DIR += packages/services/Car/car_product/sepolicy/pr
 PRODUCT_PACKAGES += \
     Bluetooth \
     CarDeveloperOptions \
-    Contacts \
+    CompanionDeviceSupport \
     OneTimeInitializer \
     Provision \
     SystemUpdater \
