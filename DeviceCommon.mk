@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 GlobalLogic
+# Copyright (C) 2020 GlobalLogic
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -276,8 +276,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.boot.evs.app=google
 
 # GNSS
-#PRODUCT_PACKAGES += \
-#    android.hardware.gnss@1.0-service.renesas
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.0-service.renesas
 
 PRODUCT_COPY_FILES += \
     vendor/renesas/hal/gnss/fake_route.txt:$(TARGET_COPY_OUT_VENDOR)/etc/fake_route.txt
