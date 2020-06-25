@@ -56,7 +56,6 @@
     <!-- Allow smart unlock immediately after boot because the user shouldn't have to enter a pin
          code to unlock their car head unit. -->
     <bool name="config_strongAuthRequiredOnBoot">false</bool>
-    <string name="config_defaultTrustAgent" translatable="false">com.android.car/com.android.car.trust.CarBleTrustAgent</string>
     <!-- Show Navigation Bar -->
     <bool name="config_showNavigationBar">true</bool>
 
@@ -107,6 +106,8 @@
     <bool name="config_supportsSystemDecorsOnSecondaryDisplays">false</bool>
 
     <string name="config_dataUsageSummaryComponent">com.android.car.settings/com.android.car.settings.datausage.DataWarningAndLimitActivity</string>
+
+    <string name="config_defaultTrustAgent" translatable="false">com.android.car.companiondevicesupport/.feature.trust.TrustedDeviceAgentService</string>
 
     <!-- Controls whether system buttons use all caps for text -->
     <bool name="config_buttonTextAllCaps">false</bool>
