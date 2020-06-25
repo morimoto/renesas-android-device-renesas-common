@@ -2,6 +2,7 @@
 allow carservice_app cgroup:file { open write };
 
 allow carservice_app wifi_service:service_manager find;
+allow carservice_app carwatchdogd_service:service_manager find;
 
 allow carservice_app healthd:binder { call transfer };
 
