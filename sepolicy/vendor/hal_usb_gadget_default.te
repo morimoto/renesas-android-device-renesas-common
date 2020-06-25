@@ -3,3 +3,4 @@ hal_server_domain(hal_usb_gadget_default, hal_usb_gadget)
 init_daemon_domain(hal_usb_gadget_default)
 
 allow hal_usb_gadget_default configfs:file create_file_perms;
+allow hal_usb_gadget_default functionfs:dir { watch watch_reads };
