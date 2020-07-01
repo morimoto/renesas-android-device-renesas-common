@@ -12,3 +12,6 @@ allow hal_gnss_default usb_device:chr_file { read open };
 
 allow hal_gnss_default self:capability sys_admin;
 allow hal_gnss_default self:netlink_kobject_uevent_socket { create setopt getopt bind read };
+
+allow hal_gnss_default sysfs:file { read open getattr };
+allow hal_gnss_default sysfs:dir { read open };
