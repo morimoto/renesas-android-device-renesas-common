@@ -43,10 +43,6 @@ PRODUCT_PACKAGES += \
     pppd \
     screenrecord
 
-# ActivityViewDemo
-PRODUCT_PACKAGES += \
-    ActivityViewDemo
-
 PRODUCT_PACKAGES += \
     RCarSoundRecorder
 
