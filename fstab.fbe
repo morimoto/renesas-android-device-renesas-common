@@ -10,7 +10,7 @@ odm                                                          /odm            ext
 /dev/block/platform/soc/ee140000.sd/by-name/misc             /misc           emmc    defaults                              defaults
 /dev/block/platform/soc/ee140000.sd/by-name/pst              /persistent     emmc    defaults                              defaults
 /dev/block/platform/soc/ee140000.sd/by-name/boot             /boot           emmc    defaults                              defaults
-/dev/block/platform/soc/ee140000.sd/by-name/metadata         /metadata       emmc    defaults                              defaults,first_stage_mount
+/dev/block/platform/soc/ee140000.sd/by-name/metadata         /metadata       ext4    defaults                              defaults,first_stage_mount
 /dev/block/platform/soc/ee140000.sd/by-name/userdata         /data           ext4    noatime,nosuid,nodev,barrier=1        wait,check,encryptable=/dev/block/platform/soc/ee140000.sd/by-name/metadata,latemount,fileencryption=aes-256-xts:aes-256-cts,quota,reservedsize=128M
 
 # External memory
