@@ -123,7 +123,7 @@ ADSP_KM_OUT_ABS         := $(abspath $(ADSP_KM_OUT))
 ADSP_KM                 := $(ADSP_KM_OUT)/xtensa-hifi.ko
 
 # rgx module
-$(ROGUE_KM):
+$(ROGUE_KM): $(PRODUCT_OUT)/system/build.prop
 	$(ANDROID_MAKE) -C $(ROGUE_KM_SRC) KERNELDIR=$(KERNEL_OUT_ABS) \
 		ANDROID_ROOT=$(abspath $(TOP)) $(KERNEL_COMPILE_FLAGS) \
 		OUT=$(ROGUE_KM_OUT_ABS) TARGET_DEVICE=$(TARGET_DEVICE)
