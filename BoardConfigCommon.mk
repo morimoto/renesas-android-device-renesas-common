@@ -146,3 +146,6 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS  := 3
 # Additional parameter, that disables KASLR
 BOARD_KERNEL_CMDLINE := nokaslr
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/etc/firmware
+
+# Temporary use SELinux in permissive mode
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
