@@ -355,6 +355,12 @@ AB_OTA_PARTITIONS := \
     product \
     odm
 
+# Enabling vendor_boot
+AB_OTA_PARTITIONS += \
+    vendor_boot
+PRODUCT_COPY_FILES += \
+    device/renesas/common/fstab.fbe:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.$(TARGET_PRODUCT)
+
 PRODUCT_PACKAGES += \
     update_verifier \
     update_engine

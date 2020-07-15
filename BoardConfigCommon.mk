@@ -117,9 +117,14 @@ BOARD_VENDOR_SEPOLICY_DIRS       += device/renesas/$(TARGET_PRODUCT)/sepolicy/ve
 #PRODUCT_SEPOLICY_SPLIT           := true
 #BOARD_ODM_SEPOLICY_DIRS          += device/renesas/$(TARGET_PRODUCT)/sepolicy/vendor
 
+# Enabling vendor_boot
+TARGET_NO_VENDOR_BOOT := false
+BOARD_BOOT_HEADER_VERSION := 3
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 33554432
+
 # Kernel build rules
 BOARD_KERNEL_BASE                := 0x48000000
-BOARD_MKBOOTIMG_ARGS             := --dtb_offset 0x800 --dtb $(PRODUCT_OUT)/dtb.img --kernel_offset 0x80000 --ramdisk_offset 0x2180000 --header_version 2
+BOARD_MKBOOTIMG_ARGS             := --dtb_offset 0x800 --dtb $(PRODUCT_OUT)/dtb.img --kernel_offset 0x80000 --ramdisk_offset 0x2180000 --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_SOURCE             := device/renesas/kernel
 
 # Kernel headers
