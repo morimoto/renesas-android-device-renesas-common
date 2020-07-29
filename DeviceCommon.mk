@@ -157,6 +157,9 @@ PRODUCT_PACKAGES += \
     fastbootd \
     android.hardware.boot@1.1-impl-renesas
 
+# Implement Virtual A/B
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 PRODUCT_COPY_FILES += \
     device/renesas/$(TARGET_PRODUCT)/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
