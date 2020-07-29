@@ -155,7 +155,7 @@ PRODUCT_BUILD_SUPER_PARTITION := true
 
 PRODUCT_PACKAGES += \
     fastbootd \
-    android.hardware.boot@1.0-impl-renesas
+    android.hardware.boot@1.1-impl-renesas
 
 PRODUCT_COPY_FILES += \
     device/renesas/$(TARGET_PRODUCT)/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
@@ -339,7 +339,7 @@ PRODUCT_PACKAGES += \
 
 # Boot control HAL (libavb)
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-service.renesas
+    android.hardware.boot@1.1-service.renesas
 
 #Fastboot HAL
 PRODUCT_PACKAGES += \
