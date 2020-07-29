@@ -87,17 +87,13 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 BOARD_BUILD_SUPER_IMAGE_BY_DEFAULT := true
 BOARD_SUPER_IMAGE_IN_UPDATE_PACKAGE := true
 
-# One group of partitions (system_a, vendor_a, product_a, odm_a)
+# Group of partitions (system, vendor, product, odm)
 # system=2357198848, vendor=268435456, product=524288000, odm=131072000
 # Group size = 3280994304
 # Reserved for metadata = 4194304
 
-# Group size * slots + metadata ANDROID_MMC_ONE_SLOT
-ifeq ($(ANDROID_MMC_ONE_SLOT),true)
-  BOARD_SUPER_PARTITION_SIZE := 3285188608
-else
-  BOARD_SUPER_PARTITION_SIZE := 6566182912
-endif
+# Group size + metadata
+BOARD_SUPER_PARTITION_SIZE := 3285188608
 
 BOARD_GROUP_GENERAL_SIZE := 3280994304
 BOARD_SUPER_PARTITION_GROUPS := group_general
