@@ -148,4 +148,9 @@
     <!-- Disable switching the user while the system is resuming from Suspend to RAM.
          This default says to prevent changing the user during Resume. -->
     <bool name="config_disableUserSwitchDuringResume" translatable="false">false</bool>
+
+    <!-- Flag specifying whether user-switch operations have custom UI. When false, user-switch
+         UI is handled by ActivityManagerService. On AAOS, this value should be true since the
+         UserSwitchUi is implemented by Car SystemUI.-->
+    <bool name="config_customUserSwitchUi">true</bool>
 </resources>
