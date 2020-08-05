@@ -142,9 +142,6 @@ VSYNC_EVENT_PHASE_OFFSET_NS      := 1000000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS   := 1000000
 USE_CONTEXT_PRIORITY             := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS  := 3
-
-# Additional parameter, that disables KASLR
-BOARD_KERNEL_CMDLINE := nokaslr
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/etc/firmware
 BOARD_KERNEL_CMDLINE += of_devlink=0
 
