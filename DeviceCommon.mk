@@ -369,6 +369,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
+# Needed for building otapackage
+PRODUCT_HOST_PACKAGES += \
+    signapk
+
 # A/B OTA dexopt update_engine hookup
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
