@@ -121,6 +121,8 @@ BOARD_VENDOR_SEPOLICY_DIRS       += device/renesas/$(TARGET_PRODUCT)/sepolicy/ve
 TARGET_NO_VENDOR_BOOT := false
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 33554432
+# Add dependency on dtb.img for vendor_boot.img
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
 # Kernel build rules
 BOARD_KERNEL_BASE                := 0x48000000
