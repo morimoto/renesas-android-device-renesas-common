@@ -88,7 +88,7 @@
 /vendor/bin/hw/vendor.renesas.graphics.cms@1.0-service.renesas                  u:object_r:hal_cms_default_exec:s0
 
 # EVS hal and app
-/vendor/bin/hw/android.hardware.automotive.evs@1.0-service.renesas              u:object_r:hal_evs_default_exec:s0
+/vendor/bin/hw/android.hardware.automotive.evs@1.1-service.renesas              u:object_r:hal_evs_default_exec:s0
 /system/bin/android.automotive.evs.manager@1.0                                  u:object_r:evs_manager_exec:s0
 /vendor/bin/evs_app.renesas                                                     u:object_r:evs_app_renesas_exec:s0
 /vendor/bin/evs_app.gl                                                          u:object_r:evs_app_gl_exec:s0

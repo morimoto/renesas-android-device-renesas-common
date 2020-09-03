@@ -26,3 +26,5 @@ allow hal_evs_default hidl_base_hwservice:hwservice_manager add;
 #allow hal_evs_default hal_graphics_allocator_default:fd use;
 
 #allow hal_evs_default display_prop:file { getattr map open read };
+
+allow hal_evs_default automotive_display_service_server:binder call;

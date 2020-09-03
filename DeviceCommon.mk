@@ -269,7 +269,7 @@ PRODUCT_PACKAGES += \
 
 # EVS resources
 PRODUCT_PACKAGES += \
-    android.hardware.automotive.evs@1.0-service.renesas \
+    android.hardware.automotive.evs@1.1-service.renesas \
     evs_app.renesas
 
 PRODUCT_COPY_FILES += \
