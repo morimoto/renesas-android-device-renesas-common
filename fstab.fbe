@@ -12,7 +12,7 @@ odm                                                          /odm            ext
 /dev/block/platform/soc/ee140000.sd/by-name/boot             /boot           emmc    defaults                              defaults
 /dev/block/platform/soc/ee140000.sd/by-name/vendor_boot      /vendor_boot    emmc    defaults                              defaults
 /dev/block/platform/soc/ee140000.sd/by-name/metadata         /metadata       ext4    defaults                              defaults,first_stage_mount,check
-/dev/block/platform/soc/ee140000.sd/by-name/userdata         /data           ext4    noatime,nosuid,nodev,barrier=1        wait,check,encryptable=/dev/block/platform/soc/ee140000.sd/by-name/metadata,latemount,fileencryption=aes-256-xts:aes-256-cts,quota,reservedsize=128M
+/dev/block/platform/soc/ee140000.sd/by-name/userdata         /data           ext4    noatime,nosuid,nodev,barrier=1        wait,check,encryptable=/dev/block/platform/soc/ee140000.sd/by-name/metadata,latemount,fileencryption=aes-256-xts:aes-256-cts,quota,metadata_csum,reservedsize=128M
 
 # External memory
 /devices/platform/soc/*/mmc_host/mmc1*                       auto            auto    defaults                              voldmanaged=sdcard1:auto,encryptable=userdata
