@@ -271,7 +271,7 @@ PRODUCT_PACKAGES += \
     evs_app.renesas
 
 PRODUCT_COPY_FILES += \
-    vendor/renesas/hal/evs/config.$(TARGET_PRODUCT).json:$(TARGET_COPY_OUT_VENDOR)/etc/automotive/evs/config.json
+    vendor/renesas/apps/evs/config.$(TARGET_PRODUCT).json:$(TARGET_COPY_OUT_VENDOR)/etc/automotive/evs/config.json
 
 PRODUCT_PACKAGES += \
     evs_app.gl
