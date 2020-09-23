@@ -196,6 +196,8 @@ PRODUCT_PACKAGES += \
 
 ifeq ($(ENABLE_ADSP),true)
 PRODUCT_PACKAGES += xf-rcar.fw
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.adsp.enabled=true
 endif
 
 PRODUCT_COPY_FILES += \

@@ -96,9 +96,11 @@ on boot
     insmod /vendor/lib/modules/mmngr.ko
     insmod /vendor/lib/modules/mmngrbuf.ko
     insmod /vendor/lib/modules/uvcs_drv.ko
-    insmod /vendor/lib/modules/xtensa-hifi.ko
     # default country code
     setprop ro.boot.wificountrycode 00
+
+on boot && property:ro.adsp.enabled=true
+    insmod /vendor/lib/modules/xtensa-hifi.ko
 
 on property:sys.boot_completed=1
     write /sys/kernel/debug/sched_features ENERGY_AWARE
