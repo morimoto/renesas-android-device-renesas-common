@@ -53,6 +53,9 @@
 # rfkill
 /dev/rfkill                                                                     u:object_r:rfkill_device:s0
 
+# cgroup
+/dev/stune/foreground/tasks                                                     u:object_r:cgroup:s0
+
 # IP utilities
 /system/bin/ip                                                                  u:object_r:ip_exec:s0
 

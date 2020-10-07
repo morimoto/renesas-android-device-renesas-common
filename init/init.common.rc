@@ -97,6 +97,7 @@ on boot
     insmod /vendor/lib/modules/uvcs_drv.ko
     # default country code
     setprop ro.boot.wificountrycode 00
+    restorecon /dev/stune/foreground/tasks
 
 on boot && property:ro.adsp.enabled=true
     insmod /vendor/lib/modules/xtensa-hifi.ko
