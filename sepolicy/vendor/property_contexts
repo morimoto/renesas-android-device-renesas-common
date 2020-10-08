@@ -1,4 +1,5 @@
 persist.vendor.pvr.apphintipc           u:object_r:display_prop:s0
+ro.adsp.enable                          u:object_r:vendor_default_prop:s0
 ro.boot.gps.                            u:object_r:gnss_prop:s0
 ro.boot.display.                        u:object_r:display_prop:s0
 ro.boot.evs.app                         u:object_r:vendor_default_prop:s0
