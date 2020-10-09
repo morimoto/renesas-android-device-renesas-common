@@ -7,3 +7,6 @@ type debugfs_pvr, debugfs_type, fs_type;
 # sysfs
 type sysfs_fs_lifetime, sysfs_type, fs_type;
 type sysfs_mmc_stat, fs_type, sysfs_type;
+
+# for PowerHal
+type proc_sched_energy_aware, proc_type, fs_type;

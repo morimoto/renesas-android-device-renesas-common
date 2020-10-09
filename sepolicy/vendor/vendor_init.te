@@ -13,6 +13,8 @@ recovery_only(`
 # Needed for set "persist.sys.usb.config" via *.mk file.
 allow vendor_init system_prop:property_service set;
 
+allow vendor_init proc_sched_energy_aware:file w_file_perms;
+
 # Needed for getting /dev/.coldboot_done file to mark when coldboot
 # stage is finished
 allow vendor_init device:file getattr;
