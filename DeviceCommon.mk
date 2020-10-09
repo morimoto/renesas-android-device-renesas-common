@@ -438,6 +438,10 @@ PRODUCT_COPY_FILES += \
 # Split selinux policy
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
+# Collect all files needed for vendor_sepolicy.cil
+PRODUCT_PACKAGES += \
+    vendor_sepolicy.cil
+
 # All VNDK libraries (HAL interfaces, VNDK, VNDK-SP, LL-NDK)
 PRODUCT_PACKAGES += vndk_package
 
