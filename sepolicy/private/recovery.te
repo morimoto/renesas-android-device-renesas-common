@@ -1,4 +1,5 @@
-allow recovery gpu_device:chr_file { ioctl open read write map };
+allow recovery gpu_device:chr_file { getattr ioctl open read write map };
+allow recovery device:dir w_dir_perms;
 
 allow recovery configfs:dir mounton;
 allow recovery functionfs:dir mounton;
