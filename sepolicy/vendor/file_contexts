@@ -3,6 +3,7 @@
 /dev/block/mmcblk[1-2]                                                          u:object_r:sdcard_block_device:s0
 /dev/block/mmcblk[1-2]+p[0-9]                                                   u:object_r:sdcard_block_device:s0
 /dev/block/platform/soc/ee140000.sd/by-name/boot_[ab]                           u:object_r:boot_block_device:s0
+/dev/block/platform/soc/ee140000.sd/by-name/vendor_boot_[ab]                    u:object_r:boot_block_device:s0
 /dev/block/platform/soc/ee140000.sd/by-name/bootloader_[ab]                     u:object_r:bootloader_block_device:s0
 /dev/block/platform/soc/ee140000.sd/by-name/dtbo_[ab]                           u:object_r:dtbo_block_device:s0
 /dev/block/platform/soc/ee140000.sd/by-name/system_[ab]                         u:object_r:system_block_device:s0
