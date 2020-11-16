@@ -1,0 +1,1 @@
+allow mediaprovider_app mnt_pass_through_file:lnk_file read;
