@@ -43,6 +43,7 @@ PRODUCT_PACKAGES += \
     StorageManager \
     Calendar \
     CalendarProvider \
+    Contacts \
     DeskClock \
     QuickSearchBox \
     atrace \
